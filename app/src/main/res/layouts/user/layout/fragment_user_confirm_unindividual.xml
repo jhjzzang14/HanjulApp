@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_handPhone"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/userPhoneE"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_handPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_handPhone"
+            android:background="@color/colorWhite"
+            android:textSize="@dimen/et_font_size"
+            android:hint="010-1234-5678"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/userNameE"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_name"
+            android:background="@color/colorWhite"
+            android:textSize="@dimen/et_font_size"
+            android:hint="홍길동"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userConfirmE"
+            android:textColor="@color/mainColor"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="4"
+            android:background="@color/colorWhite"
+            android:hint="예)핸드폰 분실 후 번호 변경"
+            android:textSize="@dimen/et_font_size"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="*약 10분에서 1시간 소요"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99999999"
+            android:text="ID/PW 요청"
+            android:textColor="@color/colorWhite"
+            />
+    </RelativeLayout>
+</LinearLayout>

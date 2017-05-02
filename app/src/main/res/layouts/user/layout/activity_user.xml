@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/userAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/userToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/appbar_height" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- ===================================================== -->
+    <!-- 회원 기본정보 -->
+    <!-- ===================================================== -->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+
+        <!-- ===================================================== -->
+        <!-- id,닫기,저장 -->
+        <!-- ===================================================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:text="@string/loginIdE"
+                    android:textSize="@dimen/user_tv_font_size"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="@dimen/user_tv_height"/>
+                <EditText
+                    android:id="@+id/et_loginId"
+                    android:textSize="@dimen/user_et_font_size"
+                    android:hint="영문자.특수문자.숫자"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/user_et_height"
+                    android:layout_toRightOf="@+id/tv_id"/>
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:text="@string/cancel"
+                    android:textSize="@dimen/user_btn_font_size"
+                    android:layout_width="@dimen/user_btn_width"
+                    android:layout_height="@dimen/user_btn_height"
+                    android:layout_toRightOf="@+id/et_loginId"/>
+                <Button
+                    android:id="@+id/btn_save"
+                    android:text="@string/save"
+                    android:textSize="@dimen/user_btn_font_size"
+                    android:layout_width="@dimen/user_btn_width"
+                    android:layout_height="@dimen/user_btn_height"
+                    android:layout_toRightOf="@+id/btn_cancel"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- ===================================================== -->
+        <!-- pw -->
+        <!-- ===================================================== -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/tv_pw"
+                    android:text="@string/loginPwE"
+                    android:textSize="@dimen/user_tv_font_size"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="@dimen/user_tv_height" />
+                <EditText
+                    android:id="@+id/et_loginPw"
+                    android:textSize="@dimen/user_et_font_size"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/user_et_height"
+                    android:hint="비밀번호 입력"
+                    android:layout_toRightOf="@+id/tv_pw"/>
+                <EditText
+                    android:id="@+id/et_loginPwRe"
+                    android:textSize="@dimen/user_et_font_size"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/user_et_height"
+                    android:hint="비빌번호 재확인"
+                    android:layout_toRightOf="@+id/et_loginPw"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- ===================================================== -->
+        <!-- 성명 -->
+        <!-- ===================================================== -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:text="@string/nameE"
+                    android:textSize="@dimen/user_tv_font_size"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="@dimen/user_tv_height" />
+                <EditText
+                    android:id="@+id/et_name"
+                    android:textSize="@dimen/user_et_font_size"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/user_et_height"
+                    android:layout_toRightOf="@+id/tv_name"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- ===================================================== -->
+        <!-- 핸드폰 -->
+        <!-- ===================================================== -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <EditText
+                    android:id="@+id/et_handPhone"
+                    android:textSize="@dimen/user_et_font_size"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/user_et_height"
+                    android:layout_toRightOf="@+id/tv_handPhone"/>
+
+                <TextView
+                    android:id="@+id/tv_handPhone"
+                    android:text="@string/handPhoneE"
+                    android:textSize="@dimen/user_tv_font_size"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="@dimen/user_tv_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ===================================================== -->
+    <!-- Tab Bar -->
+    <!-- ===================================================== -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/userTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e4dee4"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/userViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/userTab"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<resources>
+    <string name="list_item_01">1월</string>
+    <string name="list_item_02">2월</string>
+    <string name="list_item_03">3월</string>
+    <string name="list_item_04">4월</string>
+
+    <string name="app_name">Hanjul</string>
+
+    <string name="loginId">아이디</string>
+    <string name="loginIdE">아이디 *</string>
+    <string name="loginPw">비밀번호</string>
+    <string name="loginPwE">비밀번호 *</string>
+
+    <string name="subLoginId">SUB ID</string>
+    <string name="subLoginIdE">SUB ID *</string>
+    <string name="subLoginPw">SUB PW</string>
+    <string name="subLoginPwE">SUB PW *</string>
+    <string name="emailE">Email *</string>
+
+    <string name="userPhoneE">회원전화번호*</string>
+    <string name="userNameE">회원성명*</string>
+    <string name="userConfirmE">ID/PW 요청 사유*</string>
+
+    <string name="name">성명</string>
+    <string name="nameE">성명 *</string>
+    <string name="addr">주소</string>
+    <string name="handPhoneE">핸드폰 *</string>
+    <string name="orgnNameE">단체명 *</string>
+    <string name="prntOrgnNameE">상장인쇄명 *</string>
+    <string name="userGubun">권한</string>
+    <string name="agentList">대회주체 목록</string>
+
+    <!-- 버튼 -->
+    <string name="cancel">취소</string>
+    <string name="save">저장</string>
+
+
+    <string name="login">로그인</string>
+    <string name="search">찾기</string>
+    <string name="register">가입</string>
+
+</resources>

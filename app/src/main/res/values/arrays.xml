@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="user_gubun">
+        <item>단체</item>
+        <item>선수</item>
+        <item>심판</item>
+        <item>관리자</item>
+        <item>admin</item>
+    </string-array>
+</resources>

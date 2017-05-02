@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_handPhone"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/handPhoneE"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_handPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_handPhone"
+            android:background="@color/colorDefault"
+            android:enabled="false"
+            android:textSize="@dimen/et_font_size"
+            android:hint="010-1234-5678"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_name"
+            android:background="@color/colorWhite"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99999999"
+            android:text="ID/PW 요청"
+            android:textColor="@color/colorWhite"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/loginId"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_loginId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_id"
+            android:background="@color/colorDefault"
+            android:enabled="false"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_pw"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/loginPw"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_loginPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_pw"
+            android:background="@color/colorDefault"
+            android:enabled="false"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_subLoginId"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/subLoginId"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_subLoginId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_subLoginId"
+            android:background="@color/colorDefault"
+            android:enabled="false"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_subLoginPw"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:text="@string/subLoginPw"
+            android:textSize="@dimen/tv_font_size"
+            android:textColor="@color/mainColor"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/et_subLoginPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/tv_subLoginPw"
+            android:background="@color/colorDefault"
+            android:enabled="false"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

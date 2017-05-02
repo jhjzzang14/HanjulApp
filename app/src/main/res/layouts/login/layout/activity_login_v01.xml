@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="100dp"
+    android:paddingLeft="50dp"
+    android:orientation="vertical"
+    tools:context="com.keiis.hanjul.login.LoginActivity">
+
+    <!-- id -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  >
+        <TextView
+            android:id="@+id/tv_loginId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50px"
+            android:text="@string/loginId" />
+        <EditText
+            android:id="@+id/et_loginId"
+            android:inputType="textAutoComplete"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/tv_loginId"
+            android:background="#ffffff"/>
+    </RelativeLayout>
+
+    <!-- pw -->
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  >
+        <TextView
+            android:id="@+id/tv_loginPw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50px"
+            android:text="@string/loginPw" />
+        <EditText
+            android:id="@+id/et_loginPw"
+            android:inputType="textPassword"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/tv_loginPw"
+            android:background="#ffffff"/>
+    </RelativeLayout>
+
+    <!-- 사용자구분 -->
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  >
+        <TextView
+            android:id="@+id/tv_userGubun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50px"
+            android:text="@string/userGubun" />
+        <Spinner
+            android:id="@+id/sp_userGubun"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="#ff00ff"
+            android:layout_toRightOf="@id/tv_userGubun"
+            android:gravity="right"></Spinner>
+    </RelativeLayout>
+
+</LinearLayout>

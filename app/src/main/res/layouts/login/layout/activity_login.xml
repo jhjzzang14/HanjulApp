@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="100dp"
+    android:paddingLeft="50dp"
+    android:orientation="vertical"
+    tools:context="com.keiis.hanjul.login.LoginActivity">
+
+    <!-- id, pw, 분류 -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        android:layout_marginTop="100px"
+        android:alignmentMode="alignBounds">
+
+        <!-- id -->
+        <TextView
+            android:id="@+id/tv_loginId"
+            android:textSize="50px"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginId" />
+        <EditText
+            android:id="@+id/et_loginId"
+            android:inputType="textAutoComplete"
+            android:textSize="30px"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:layout_toRightOf="@id/tv_loginId"/>
+
+        <!-- pw -->
+        <TextView
+            android:id="@+id/tv_loginPw"
+            android:textSize="50px"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginPw" />
+        <EditText
+            android:id="@+id/et_loginPw"
+            android:inputType="textPassword"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#d7d5d7"
+            android:layout_toRightOf="@id/tv_loginPw" />
+
+        <!-- 사용자구분 -->
+        <TextView
+            android:id="@+id/tv_userGubun"
+            android:textSize="50px"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userGubun" />
+        <Spinner
+            android:id="@+id/sp_userGubun"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="#ff00ff"
+            android:layout_toRightOf="@id/tv_userGubun"
+            android:gravity="right"></Spinner>
+    </GridLayout>
+
+    <!-- 버튼 -->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:text="@string/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_search"
+            android:text="@string/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_register"
+            android:text="@string/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

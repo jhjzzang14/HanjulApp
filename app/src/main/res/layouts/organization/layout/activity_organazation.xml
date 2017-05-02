@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_organazation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.keiis.hanjul.organazation.OrganizationActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"></include>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="2"
+        android:padding="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대회선택*"
+            android:textSize="20dp"
+            />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></Spinner>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="그룹*"
+            android:textSize="20dp"
+            />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></Spinner>
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*최종수정가능일시\n2016.11.05 16:00"
+        android:layout_gravity="center"
+        android:textColor="#fb3b30"
+        />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="선수등록 및 종목신청"
+        android:layout_gravity="center"
+        android:background="@color/colorWhite"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*선수 참가부는 \n매년 자동 증가 됨"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/btn_dividend"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="배번관리"
+        android:layout_gravity="center"
+        android:background="@color/colorWhite"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="기록조회"
+        android:layout_gravity="center"
+        android:background="@color/colorWhite"
+        android:layout_margin="10dp"
+        />
+</LinearLayout>
