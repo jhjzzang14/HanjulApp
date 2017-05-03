@@ -25,7 +25,8 @@
         <activity android:name=".Admin.AdminActivity" />
         <activity android:name=".judgement.RecordActivity" />
         <activity android:name=".organazation.DividendActiviy" />
-        <activity android:name=".organazation.RecordActivity"></activity>
+        <activity android:name=".organazation.RecordActivity" />
+        <activity android:name=".Admin.MainActivity"></activity>
     </application>
 
 </manifest>
