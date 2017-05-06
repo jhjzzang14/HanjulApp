@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".organazation.OrganizationActivity">
+        <activity android:name=".admin.CompetitionManagementActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +22,12 @@
         <activity android:name=".user.UserConfirmActivity" />
         <activity android:name=".judgement.JudgementActivity" />
         <activity android:name=".organazation.PlayerManagerActivity" />
-        <activity android:name=".Admin.AdminActivity" />
+        <activity android:name=".admin.AdminActivity" />
         <activity android:name=".judgement.RecordActivity" />
         <activity android:name=".organazation.DividendActiviy" />
         <activity android:name=".organazation.RecordActivity" />
-        <activity android:name=".Admin.MainActivity"></activity>
+        <activity android:name=".admin.RecordSituationBoardActivity" />
+        <activity android:name=".admin.ParticipationStatusActivity"></activity>
     </application>
 
 </manifest>

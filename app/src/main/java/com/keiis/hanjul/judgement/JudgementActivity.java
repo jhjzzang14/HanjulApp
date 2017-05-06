@@ -25,6 +25,7 @@ public class JudgementActivity extends AppCompatActivity {
     @BindView(R.id.judgement_number)
     EditText judgementNumberEditText;
 
+
     //기록 등록 버튼 클릭시 이벤트
     @OnClick(R.id.btn_record)
     void actionRecord(){

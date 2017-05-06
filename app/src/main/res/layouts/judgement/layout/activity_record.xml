@@ -23,20 +23,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="종목"
+            android:textSize="18dp"
+            android:layout_gravity="center_vertical"
             />
 
         <Spinner
             android:id="@+id/subject_list"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/subject"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
             ></Spinner>
 
         <Button
+            android:id="@+id/btn_search"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="차수증가"
             android:layout_toRightOf="@id/subject_list"
+            android:background="@color/colorWhite"
+            android:layout_gravity="center_vertical"
             />
 
     </GridLayout>
@@ -46,16 +53,18 @@
         android:layout_height="1dp"
         android:background="#ceced4"></View>
 
-    <android.support.v7.app.AlertController.RecycleListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/rc_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         >
-    </android.support.v7.app.AlertController.RecycleListView>
+    </android.support.v7.widget.RecyclerView>
+
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,6 +74,7 @@
             />
 
         <EditText
+            android:id="@+id/et_record"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite"
@@ -84,15 +94,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:id="@+id/btn_identity"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="선수확인"
             android:background="@color/colorWhite"
             android:layout_margin="5dp"
             />
         <Button
+            android:id="@+id/btn_record_save"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="기록저장"
             android:background="@color/colorWhite"
             android:layout_margin="5dp"

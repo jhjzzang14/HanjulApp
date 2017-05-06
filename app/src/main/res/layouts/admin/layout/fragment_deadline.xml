@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_gravity="center"
         >
     <TextView
         android:layout_width="wrap_content"
@@ -15,43 +18,48 @@
         />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:background="#efeff4"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginLeft="10dp"
             />
     </GridLayout>
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_gravity="center"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="변경일시 :"
+            android:text="마감일시 :"
             />
 
         <TextView
+            android:id="@+id/tv_deadline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="16.11.10 15:00"
             />
     </GridLayout>
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_send_message"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="마감일시 문자 발송"
+        android:background="@color/colorWhite"
+        android:layout_gravity="center"
         />
 
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_gravity="center"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -60,22 +68,27 @@
             />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:background="#efeff4"
+            android:background="@color/colorWhite"
+            android:id="@+id/et_modify_date"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="50dp"
             />
     </GridLayout>
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_modify"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
         android:text="마감일시 변경"
+        android:layout_gravity="center"
         />
 
     <CheckBox
+        android:id="@+id/cb_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="마감일시 관리 여부"
+        android:layout_gravity="center"
         />
 </LinearLayout>

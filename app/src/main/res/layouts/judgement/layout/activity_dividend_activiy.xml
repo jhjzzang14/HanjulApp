@@ -56,25 +56,20 @@
     </GridLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="배번생성"
         android:layout_margin="10dp"
+        android:id="@+id/btn_dividend"
+        android:background="@color/colorWhite"
+        android:layout_gravity="center"
         />
-    
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="*배번인쇄"
+        android:text="*배번인쇄\n-배번인쇄는 PC에서 URL을 접속 후 인쇄하시기 바랍니다.\n-www.kelis.co.kr/hanjul/ 배번인쇄"
+        android:layout_margin="10dp"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-배번인쇄는 PC에서 URL을 접속 후 인쇄하시기 바랍니다."
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-www.kelis.co.kr/hanjul/ 배번인쇄"
-        />
+
 </LinearLayout>

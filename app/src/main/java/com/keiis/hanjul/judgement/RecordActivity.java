@@ -6,6 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -13,6 +14,7 @@ import com.keiis.hanjul.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class RecordActivity extends AppCompatActivity {
 
@@ -25,7 +27,20 @@ public class RecordActivity extends AppCompatActivity {
     @BindView(R.id.subject_list)
     Spinner subjectSpinnerVIew;
 
+    @BindView(R.id.et_record)
+    EditText recordEditText;
+
     private RecordAdapter recordAdapter;
+
+    @OnClick(R.id.btn_identity)
+    void actionIdentity(){
+        //선수 확인 버튼 클릭시
+    }
+
+    @OnClick(R.id.btn_record_save)
+    void actionSave(){
+        //기록저장 버튼 클릭시
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

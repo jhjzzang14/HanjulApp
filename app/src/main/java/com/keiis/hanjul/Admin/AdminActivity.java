@@ -1,4 +1,4 @@
-package com.keiis.hanjul.Admin;
+package com.keiis.hanjul.admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

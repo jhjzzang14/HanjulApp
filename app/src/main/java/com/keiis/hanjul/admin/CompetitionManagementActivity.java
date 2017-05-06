@@ -1,7 +1,6 @@
-package com.keiis.hanjul.organazation;
+package com.keiis.hanjul.admin;
 
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,41 +8,42 @@ import android.widget.TextView;
 
 import com.keiis.hanjul.R;
 
-import java.util.ArrayList;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PlayerManagerActivity extends AppCompatActivity {
-
-    @BindView(R.id.tab_player_register)
-    TabLayout tabLayout;
+public class CompetitionManagementActivity extends AppCompatActivity {
 
     @BindView(R.id.tv_title)
     TextView titleView;
 
     @BindView(R.id.viewpager)
-    ViewPager viewPagerView;
+    ViewPager viewPager;
+
+    @BindView(R.id.tab_competition)
+    TabLayout tabLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_player_register);
+        setContentView(R.layout.activity_competition_management);
 
         ButterKnife.bind(this);
 
-        titleView.setText("선수 관리");
-        viewPagerView.setAdapter(new TabAdapter(getSupportFragmentManager()));
+        titleView.setText("대회관리");
 
-        tabLayout.addTab(tabLayout.newTab().setText("선수목록"));
-        tabLayout.addTab(tabLayout.newTab().setText("선수등록"));
+        tabLayout.addTab(tabLayout.newTab().setText("배번관리"));
+        tabLayout.addTab(tabLayout.newTab().setText("마감일시"));
+        tabLayout.addTab(tabLayout.newTab().setText("심판승인"));
 
-        viewPagerView.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.setAdapter(new CompetitionManagementAdapter(getSupportFragmentManager()));
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPagerView.setCurrentItem(tab.getPosition());
+                viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override

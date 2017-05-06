@@ -8,11 +8,17 @@ import com.keiis.hanjul.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class DividendActiviy extends AppCompatActivity {
 
     @BindView(R.id.tv_title)
     TextView titleView;
+
+    @OnClick(R.id.btn_dividend)
+    void actionDividend(){
+        //배번생성 클릭시 이벤트 처리
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
