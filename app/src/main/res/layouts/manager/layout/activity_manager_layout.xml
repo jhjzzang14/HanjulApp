@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_manager_sign"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorWhite"
+        android:text="관리자 승인" />
+
+    <Button
+        android:id="@+id/btn_user_password_submit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:layout_gravity="center"
+        android:text="회원 패스워드전송"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/competition_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대회선택"
+            android:textSize="20dp"/>
+        <Spinner
+            android:id="@+id/sp_competition"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"></Spinner>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_order_management"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:text="차수 관리" />
+    <Button
+        android:id="@+id/btn_rating_management"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:layout_gravity="center"
+        android:text="등수, 대상, 등급 관리"/>
+    <Button
+        android:id="@+id/btn_listing_numbering"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:layout_gravity="center"
+        android:text="상장번호 부여"/>
+    <Button
+        android:id="@+id/btn_process_management"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:layout_gravity="center"
+        android:text="진행관리"/>
+
+</LinearLayout>
