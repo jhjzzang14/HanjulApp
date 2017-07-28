@@ -6,7 +6,7 @@
 
 주요 라이브러리 : Lombok,ButterKnife,retrofit2
 
-  Lombok : 보일플레이트를 줄이기 위해서 사용
-  ButterKnife : 마찬가지로 보일플레이트를 줄이고 코드의 생산성을 높이기 위해서 사용
-  retrofit2 : http 통신을 사용하기 위해서 사용 (GSON 라이브러리도 필요 json객체를 convert하기 위해서)
+  <li>Lombok : 보일플레이트를 줄이기 위해서 사용</li>
+  <li>ButterKnife : 마찬가지로 보일플레이트를 줄이고 코드의 생산성을 높이기 위해서 사용</li>
+  <li>retrofit2 : http 통신을 사용하기 위해서 사용 (GSON 라이브러리도 필요 json객체를 convert하기 위해서)</li>
   
