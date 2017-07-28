@@ -24,20 +24,26 @@
             android:layout_height="wrap_content"
             android:text="대회선택*"
             android:textSize="20dp"
+            android:layout_margin="10dp"
             />
         <Spinner
+            android:id="@+id/subjectSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             ></Spinner>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="그룹*"
             android:textSize="20dp"
+            android:layout_margin="10dp"
             />
         <Spinner
+            android:id="@+id/groupSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             ></Spinner>
     </GridLayout>
 
@@ -47,6 +53,7 @@
         android:text="*최종수정가능일시\n2016.11.05 16:00"
         android:layout_gravity="center"
         android:textColor="#fb3b30"
+        android:visibility="gone"
         />
 
     <Button
@@ -57,12 +64,14 @@
         android:layout_gravity="center"
         android:background="@color/colorWhite"
         android:layout_margin="10dp"
+        android:visibility="gone"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*선수 참가부는 \n매년 자동 증가 됨"
         android:layout_gravity="center"
+        android:visibility="gone"
         />
     <Button
         android:id="@+id/btn_dividend"
@@ -72,14 +81,33 @@
         android:layout_gravity="center"
         android:background="@color/colorWhite"
         android:layout_margin="10dp"
+        android:visibility="gone"
         />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
     <Button
         android:id="@+id/btn_record"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="기록조회"
-        android:layout_gravity="center"
-        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:background="@color/mainColor"
+        android:textColor="@color/colorWhite"
         android:layout_margin="10dp"
         />
+        <Button
+            android:id="@+id/btn_subject"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="대회요강"
+            android:gravity="center"
+            android:background="@color/mainColor"
+            android:textColor="@color/colorWhite"
+            android:layout_margin="10dp"
+            />
+    </GridLayout>
 </LinearLayout>

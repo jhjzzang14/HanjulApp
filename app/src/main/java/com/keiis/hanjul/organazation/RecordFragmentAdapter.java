@@ -6,7 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.keiis.hanjul.NetworkModel.ResultList;
 import com.keiis.hanjul.R;
+
+import java.util.List;
 
 /**
  * Created by hojun on 2017-05-01.
@@ -20,7 +23,7 @@ public class RecordFragmentAdapter extends BaseAdapter{
     private int selectNumber;
     private LayoutInflater inflater;
 
-    public RecordFragmentAdapter(Context context,int selectNumber) {
+    public RecordFragmentAdapter(Context context, int selectNumber) {
         inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.selectNumber = selectNumber;
     }

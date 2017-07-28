@@ -1,5 +1,6 @@
 package com.keiis.hanjul.organazation;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -9,15 +10,22 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  */
 
 public class RecordAdapter extends FragmentStatePagerAdapter {
-    public RecordAdapter(FragmentManager fm) {
+
+    private Bundle bundle;
+
+    public RecordAdapter(FragmentManager fm, Bundle bundle) {
         super(fm);
+        this.bundle = bundle;
     }
 
     @Override
     public Fragment getItem(int position) {
 
         if(position == 0){
-            return new RecordSubjectFragment();
+            RecordSubjectFragment subjectFragment = new RecordSubjectFragment();
+            subjectFragment.setArguments(bundle);
+
+            return subjectFragment;
         }else if(position == 1){
             return new RecordPersonalFragment();
         }else if(position == 2){

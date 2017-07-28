@@ -3,7 +3,6 @@ package com.keiis.hanjul.NetworkModel;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,17 +13,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResultModel<T> {
-
-    private Result result;
+public class DataResult<T> {
+    private com.keiis.hanjul.NetworkModel.result result;
 
     private List<T> dataArray;
-
-    class Result{
-        private String resultMsg;
-
-        private String resultCd;
-    }
-
-
 }

@@ -17,6 +17,7 @@ android {
                     [
                             'src/main/res/layouts/judgement',
                             'src/main/res/layouts/login',
+                            'src/main/res/layouts/menu',
                             'src/main/res/layouts/user',
                             'src/main/res/layouts/organization',
                             'src/main/res/layouts/admin',
@@ -48,6 +49,8 @@ dependencies {
     compile "com.squareup.retrofit2:retrofit:2.1.0"
     compile "com.squareup.retrofit2:converter-gson:2.1.0"
     compile "com.squareup.okhttp3:okhttp:3.3.1"
+    //viewpager 현재 표시
+    compile 'ua.in.iua:thesimplestpageindicator:1.0.0'
 
     compile 'com.android.support:recyclerview-v7:25.0.+'
 }

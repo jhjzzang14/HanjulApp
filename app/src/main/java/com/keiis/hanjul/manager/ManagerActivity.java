@@ -1,5 +1,6 @@
 package com.keiis.hanjul.manager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -22,10 +23,24 @@ public class ManagerActivity extends AppCompatActivity {
     @OnClick(R.id.btn_manager_sign)
     void actionSign(){
         //이벤트 발생
+        Intent intent = new Intent(ManagerActivity.this,ManagementActivity.class);
+
+        startActivity(intent);
     }
 
-    @BindView(R.id.btn_manager_sign)
-    TextView textView;
+    @OnClick(R.id.btn_user_password_submit)
+    void actionPasswordSubmit(){
+        //회원 패스워드 전송
+    }
+
+    @OnClick(R.id.btn_order_management)
+    void actionOrder(){
+        //차수관리
+    }
+
+
+    @BindView(R.id.tv_title)
+    TextView titleView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,8 +50,7 @@ public class ManagerActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        textView.getText().toString();
-
+        titleView.setText("Admin");
 
     }
 }

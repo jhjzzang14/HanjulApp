@@ -16,14 +16,16 @@
             android:text="종목*"
             android:textSize="18dp"
             android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
             />
 
         <Spinner
             android:id="@+id/sp_subject"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
+            android:gravity="center_vertical"
             />
     </GridLayout>
 

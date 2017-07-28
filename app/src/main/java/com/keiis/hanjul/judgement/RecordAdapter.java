@@ -17,8 +17,12 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
 
     private LayoutInflater inflater;
 
-    public RecordAdapter(Context context){
+    private int peopleCnt;
+
+    public RecordAdapter(Context context,int peopleCnt){
         inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        this.peopleCnt = peopleCnt;
     }
 
     @Override
@@ -38,7 +42,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return peopleCnt;
     }
 
     class RecordViewHolder extends RecyclerView.ViewHolder{

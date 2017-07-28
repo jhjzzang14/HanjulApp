@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DefaultRestClient<T> {
     private T service;
-    private String baseUrl = "http://192.168.0.194:8080/Hanjul/";
+    private String baseUrl = "http://www.keiis.co.kr/hanjulApp/";
 
     public T getClient(Class<? extends T> type){
         if (service == null){

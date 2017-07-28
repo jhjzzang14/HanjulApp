@@ -11,6 +11,7 @@ import com.keiis.hanjul.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class RecordActivity extends AppCompatActivity {
 
@@ -22,6 +23,11 @@ public class RecordActivity extends AppCompatActivity {
 
     @BindView(R.id.tab_record)
     TabLayout tabLayout;
+
+    @OnClick(R.id.back)
+    void actionBack(){
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +42,7 @@ public class RecordActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("개인"));
         tabLayout.addTab(tabLayout.newTab().setText("대회최고"));
 
-        viewPager.setAdapter(new RecordAdapter(getSupportFragmentManager()));
+        viewPager.setAdapter(new RecordAdapter(getSupportFragmentManager(),getIntent().getBundleExtra("contest")));
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 

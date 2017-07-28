@@ -11,7 +11,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admin.CompetitionManagementActivity">
+        <activity android:name=".login.LoginActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,14 +22,20 @@
         </activity>
         <activity android:name=".user.UserActivity" />
         <activity android:name=".user.UserConfirmActivity" />
-        <activity android:name=".judgement.JudgementActivity" />
+        <activity android:name=".judgement.JudgementActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            />
         <activity android:name=".organazation.PlayerManagerActivity" />
+        <activity android:name=".organazation.OrganizationActivity"></activity>
         <activity android:name=".admin.AdminActivity" />
-        <activity android:name=".judgement.RecordActivity" />
+        <activity android:name=".judgement.RecordActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            />
         <activity android:name=".organazation.DividendActiviy" />
         <activity android:name=".organazation.RecordActivity" />
         <activity android:name=".admin.RecordSituationBoardActivity" />
         <activity android:name=".admin.ParticipationStatusActivity"></activity>
+        <activity android:name=".organazation.CompetitionSummaryActivity"></activity>
     </application>
 
 </manifest>
