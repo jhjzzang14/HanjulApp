@@ -9,8 +9,11 @@ import android.widget.Toast;
 import com.keiis.hanjul.NetworkService.DefaultRestClient;
 import com.keiis.hanjul.NetworkService.UserService;
 import com.keiis.hanjul.R;
+import com.keiis.hanjul.admin.AdminActivity;
 import com.keiis.hanjul.judgement.JudgementActivity;
+import com.keiis.hanjul.manager.ManagerActivity;
 import com.keiis.hanjul.organazation.OrganizationActivity;
+import com.keiis.hanjul.user.UserActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -61,10 +64,24 @@ public class LoginActivity extends AppCompatActivity {
     @OnClick(R.id.btn_record_register) void findUserConfirm(){
         //심판 기록등록으로 이동
         //로그인 아이디, 사용자 번호 디폴트
-        if(loginId.getText().toString().equals("hanjul01")){
+        String id = loginId.getText().toString();
+        if(id.equals("hanjul01")){
             getSharedPreferences("user",MODE_PRIVATE).edit().putString("login_id","hanjul01").commit();
             getSharedPreferences("user",MODE_PRIVATE).edit().putString("user_no","13").commit();
             Intent intent = new Intent(LoginActivity.this, JudgementActivity.class);
+
+            startActivity(intent);
+        }else if(id.equals("admin")){
+
+            Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+
+            startActivity(intent);
+        }else if(id.equals("manager")){
+            Intent intent = new Intent(LoginActivity.this, ManagerActivity.class);
+
+            startActivity(intent);
+        }else if(id.equals("user")){
+            Intent intent = new Intent(LoginActivity.this, UserActivity.class);
 
             startActivity(intent);
         }else{

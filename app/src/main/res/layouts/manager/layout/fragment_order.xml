@@ -93,34 +93,65 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        android:stretchColumns="*">
-        <TableRow>
+        android:stretchColumns="*"
+        android:layout_margin="10dp"
+        >
+        <TableRow
+            android:background="#88246ee8"
+            android:gravity="center"
+            android:padding="10dp"
+            android:weightSum="5"
+            >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="심판"/>
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:text="심판"
+                android:layout_weight="1"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="성명"/>
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:text="성명"
+                android:layout_weight="1"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="배번" />
+                android:gravity="center"
+                android:textColor="#333333"
+                android:text="배번"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="기록"/>
+                android:gravity="center"
+                android:textColor="#333333"
+                android:text="기록"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="등수/등급"/>
+                android:gravity="center"
+                android:textColor="#333333"
+                android:text="등수/등급"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
         </TableRow>
         <ListView
             android:layout_width="match_parent"

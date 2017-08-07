@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#efeff4"
+    android:padding="10dp"
+    android:weightSum="5"
+    >
 
     <TextView
         android:id="@+id/tv_organization"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         />
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         />
     <TextView
         android:id="@+id/tv_personal_count"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         />
     <TextView
         android:id="@+id/tv_generated"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         />
 
-    <Button
+    <TextView
         android:id="@+id/tv_message"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:background="@color/colorWhite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         android:text="발송"
         />
 </TableRow>

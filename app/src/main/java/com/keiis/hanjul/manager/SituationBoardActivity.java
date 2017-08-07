@@ -24,7 +24,7 @@ public class SituationBoardActivity extends AppCompatActivity{
     @BindView(R.id.tv_title)
     TextView titleView;
 
-    @BindView(R.id.tab_management)
+    @BindView(R.id.tab_situation_board)
     TabLayout tabLayout;
 
     @BindView(R.id.viewpager)

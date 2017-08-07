@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <TableLayout
         android:layout_width="match_parent"
@@ -13,16 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#88246ee8"
-            android:gravity="center"
             android:weightSum="5"
+            android:padding="10dp"
             >
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="참가부"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:layout_gravity="center"
                 android:textColor="#333333"
                 android:textStyle="bold"
                 android:layout_weight="1"
@@ -31,9 +30,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="선수명"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:layout_gravity="center"
                 android:textColor="#333333"
                 android:textStyle="bold"
                 android:layout_weight="1"
@@ -42,10 +39,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="개수"
-                android:layout_margin="10dp"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:layout_gravity="center"
                 android:textColor="#333333"
                 android:textStyle="bold"
                 android:layout_weight="1"
@@ -55,9 +49,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="등급"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:layout_gravity="center"
                 android:textColor="#333333"
                 android:textStyle="bold"
                 android:layout_weight="1"
@@ -66,9 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="단체"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:layout_gravity="center"
                 android:textColor="#333333"
                 android:textStyle="bold"
                 android:layout_weight="1"

@@ -27,15 +27,24 @@
             />
         <activity android:name=".organazation.PlayerManagerActivity" />
         <activity android:name=".organazation.OrganizationActivity"></activity>
+        
         <activity android:name=".admin.AdminActivity" />
+        <activity android:name=".admin.RecordSituationBoardActivity" />
+        <activity android:name=".admin.ParticipationStatusActivity"></activity>
+        <activity android:name=".admin.CompetitionManagementActivity"></activity>
+        
+        <activity android:name=".manager.ManagementActivity"></activity>
+        <activity android:name=".manager.ManagerActivity"></activity>
+        <activity android:name=".manager.SituationBoardActivity"></activity>
+
         <activity android:name=".judgement.RecordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             />
         <activity android:name=".organazation.DividendActiviy" />
         <activity android:name=".organazation.RecordActivity" />
-        <activity android:name=".admin.RecordSituationBoardActivity" />
-        <activity android:name=".admin.ParticipationStatusActivity"></activity>
+
         <activity android:name=".organazation.CompetitionSummaryActivity"></activity>
+
     </application>
 
 </manifest>

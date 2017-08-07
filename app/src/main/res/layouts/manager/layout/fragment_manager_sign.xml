@@ -24,24 +24,40 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
         android:stretchColumns="*">
-        <TableRow>
+        <TableRow
+            android:background="#88246ee8"
+            android:gravity="center"
+            android:padding="10dp"
+            android:weightSum="3"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="승인"/>
+                android:textColor="#333333"
+                android:gravity="center"
+                android:text="승인"
+                android:textStyle="bold"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="성명"/>
+                android:textColor="#333333"
+                android:gravity="center"
+                android:text="성명"
+                android:textStyle="bold"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="휴대폰"/>
+                android:textColor="#333333"
+                android:gravity="center"
+                android:text="휴대폰"
+                android:textStyle="bold"
+                />
         </TableRow>
         <ListView
             android:layout_width="match_parent"

@@ -38,6 +38,13 @@ public class ManagerActivity extends AppCompatActivity {
         //차수관리
     }
 
+    @OnClick(R.id.btn_process_management)
+    void actionProcessManagement(){
+        Intent intent = new Intent(ManagerActivity.this,SituationBoardActivity.class);
+
+        startActivity(intent);
+    }
+
 
     @BindView(R.id.tv_title)
     TextView titleView;

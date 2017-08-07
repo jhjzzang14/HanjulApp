@@ -13,18 +13,29 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:padding="10dp"
+            android:background="#88246ee8"
             >
             <TextView
                 android:id="@+id/subject_1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="지도자"
                 />
             <TextView
                 android:id="@+id/subject_2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="지도자"
                 />
         </TableRow>
         <ListView
