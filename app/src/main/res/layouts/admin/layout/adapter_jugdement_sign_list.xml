@@ -7,13 +7,18 @@
     android:background="#efeff4"
     >
 
-    <CheckBox
-        android:id="@+id/checkbox"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        />
+        >
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/judgement_name"
@@ -21,5 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
+        android:text="홍만체"
+        android:layout_gravity="center"
         />
 </TableRow>

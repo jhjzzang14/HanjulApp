@@ -1,0 +1,11 @@
+
+fsquid:S1132"JMove the "user" string literal on the left side of this string comparison.(¡Ö½®8”ØáÛ+
+nsquid:S1132"MMove the "manager" string literal on the left side of this string comparison.(ˆ ¢Óÿÿÿÿÿ8•äÓáÛ+
+usquid:S1450"`Remove the "defaultRestClient" field and declare it as a local variable in the relevant methods.(Á³Şª
+hsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ
+hsquid:S1132"NMove the "hanjul01" string literal on the left side of this string comparison.(ÎÌÄƒûÿÿÿÿ
+lsquid:S1132"KMove the "admin" string literal on the left side of this string comparison.(’ñŠšùÿÿÿÿ8×¸ÓáÛ+
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İÈ„¢ûÿÿÿÿ
+Isquid:S1068"/Remove this unused "userService" private field.(¶òÁÈùÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÀÕò¤şÿÿÿÿ
+tsquid:S1450"ZRemove the "userService" field and declare it as a local variable in the relevant methods.(¶òÁÈùÿÿÿÿ

@@ -24,7 +24,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/colorWhite"
             android:text="상장번호 부여"/>
 
     </LinearLayout>
@@ -45,7 +44,6 @@
             android:id="@+id/btn_prize_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
             android:text="상장번호 초기화"/>
 
     </LinearLayout>
@@ -86,7 +84,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/colorWhite"
             android:text="상장번호 초기화"/>
     </LinearLayout>
 

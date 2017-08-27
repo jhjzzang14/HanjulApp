@@ -71,12 +71,12 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, JudgementActivity.class);
 
             startActivity(intent);
-        }else if(id.equals("admin")){
+        }else if(id.equals("manager")){
 
             Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
 
             startActivity(intent);
-        }else if(id.equals("manager")){
+        }else if(id.equals("admin")){
             Intent intent = new Intent(LoginActivity.this, ManagerActivity.class);
 
             startActivity(intent);

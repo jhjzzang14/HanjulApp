@@ -18,7 +18,7 @@ public class ParticipationStatusAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if(position == 0){
-            return new OrganizationFragment();
+            return new ParticipationOrganizationSubjectFragment();
         }else if(position == 1){
             return new ParticipationSubjectFragment();
         }else if(position == 2){

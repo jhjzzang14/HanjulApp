@@ -1,0 +1,5 @@
+
+Rsquid:UselessImportCheck"0Remove this unused import 'retrofit2.http.Body'.(º–øÚ
+qsquid:UselessImportCheck"JRemove this unused import 'com.keiis.hanjul.NetworkModel.BodyExistPlayer'.(ç“ß¥ùÿÿÿÿ
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(³¯ÂÂ
+csquid:UselessImportCheck"ARemove this unused import 'com.keiis.hanjul.NetworkModel.result'.(¾‹°œ

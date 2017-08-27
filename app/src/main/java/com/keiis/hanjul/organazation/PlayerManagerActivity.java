@@ -25,6 +25,7 @@ public class PlayerManagerActivity extends AppCompatActivity {
     @BindView(R.id.viewpager)
     ViewPager viewPagerView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

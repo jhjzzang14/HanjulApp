@@ -55,7 +55,7 @@ public class DividendFragment extends Fragment{
 
         @Override
         public int getCount() {
-            return 0;
+            return 1;
         }
 
         @Override
@@ -81,9 +81,9 @@ public class DividendFragment extends Fragment{
 
             TextView generatedView = (TextView)view.findViewById(R.id.tv_generated);
 
-            TextView messageVIew = (TextView)view.findViewById(R.id.tv_message);
+            Button messageVIew = (Button) view.findViewById(R.id.tv_message);
 
-            return null;
+            return view;
         }
     }
 }

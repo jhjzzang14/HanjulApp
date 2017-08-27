@@ -1,0 +1,6 @@
+
+ssquid:S3008"YRename this field "RECORD_SUBJECT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÏ‡‹úÿÿÿÿ
+osquid:S3008"ZRename this field "RECORD_PERSONAL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…“¦à
+ksquid:S3008"VRename this field "RECORD_BEST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÖÔş
+Rsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+gsquid:UselessImportCheck"ERemove this unused import 'com.keiis.hanjul.NetworkModel.ResultList'.(¢½µ

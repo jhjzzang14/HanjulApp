@@ -39,6 +39,8 @@ public class SituationBoardActivity extends AppCompatActivity{
 
         titleView.setText("대회상황판");
 
+        String contentsName = getIntent().getStringExtra("contents_name");
+
         tabLayout.addTab(tabLayout.newTab().setText("차수"));
         tabLayout.addTab(tabLayout.newTab().setText("등급"));
         tabLayout.addTab(tabLayout.newTab().setText("상장"));
@@ -47,6 +49,16 @@ public class SituationBoardActivity extends AppCompatActivity{
         viewPager.setAdapter(new ManagementAdapter(getSupportFragmentManager()));
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        if(contentsName.equals("order")){
+            viewPager.setCurrentItem(0);
+        }else if(contentsName.equals("rating")){
+            viewPager.setCurrentItem(1);
+        }else if(contentsName.equals("numbering")){
+            viewPager.setCurrentItem(2);
+        }else if(contentsName.equals("process")){
+            viewPager.setCurrentItem(3);
+        }
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

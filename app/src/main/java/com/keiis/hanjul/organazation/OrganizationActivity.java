@@ -1,6 +1,8 @@
 package com.keiis.hanjul.organazation;
 
 import android.content.Intent;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,6 +45,9 @@ public class OrganizationActivity extends AppCompatActivity {
     @BindView(R.id.groupSpinner)
     Spinner groupSpinner;
 
+    @BindView(R.id.activity_organazation)
+    DrawerLayout drawerLayout;
+
     private DefaultRestClient<OrganizationService> defaultRestClient;
 
     private OrganizationService organizationService;
@@ -58,6 +63,11 @@ public class OrganizationActivity extends AppCompatActivity {
     @OnClick(R.id.back)
     void actionBack(){
         finish();
+    }
+
+    @OnClick(R.id.menu)
+    void actionMenu(){
+        drawerLayout.openDrawer(GravityCompat.START);
     }
 
     @Override
