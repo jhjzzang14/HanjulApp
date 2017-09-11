@@ -214,6 +214,7 @@
             android:text="기록"
             android:textSize="18dp"
             android:layout_margin="5dp"
+            android:layout_gravity="center"
             />
 
         <EditText
@@ -227,6 +228,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginLeft="15dp"
             android:inputType="number"
+            android:layout_gravity="center"
             />
 
         <TextView
@@ -235,30 +237,22 @@
             android:layout_height="wrap_content"
             android:textSize="16dp"
             android:layout_margin="5dp"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/btn_record_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기록저장"
+            android:background="#ceced4"
+            android:textColor="@color/colorWhite"
+            android:enabled="false"
+            android:elevation="1dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
             />
     </GridLayout>
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </GridLayout>
-
-    <Button
-        android:id="@+id/btn_record_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="기록저장"
-        android:background="#ceced4"
-        android:textColor="@color/colorWhite"
-        android:enabled="false"
-        android:elevation="1dp"
-        android:padding="10dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        />
 
 </LinearLayout>
