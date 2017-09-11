@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.keiis.hanjul.R;
 
@@ -21,10 +20,6 @@ import butterknife.ButterKnife;
  */
 
 public class ParticipationOrganizationFragment extends Fragment {
-    @BindView(R.id.subject_1)
-    TextView subject1View;
-    @BindView(R.id.subject_2)
-    TextView subject2View;
 
     @BindView(R.id.list_view)
     ListView listView;
@@ -33,13 +28,9 @@ public class ParticipationOrganizationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_participation,container,false);
+        View view = inflater.inflate(R.layout.fragment_group_exhibition,container,false);
 
         ButterKnife.bind(this,view);
-
-        subject1View.setText("단체명");
-
-        subject2View.setText("참가인원");
 
         listView.setAdapter(new FragmentAdapter());
 

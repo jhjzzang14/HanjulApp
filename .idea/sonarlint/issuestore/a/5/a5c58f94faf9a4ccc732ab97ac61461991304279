@@ -1,0 +1,21 @@
+
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Õıë¶şÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†õÎ¨ÿÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Õıë¶şÿÿÿÿ
+usquid:S1450"`Remove the "defaultRestClient" field and declare it as a local variable in the relevant methods.(ŒË®Ù
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
+qsquid:S1188"\Reduce this anonymous class number of lines from 47 to at most 20, or make it a named class.(Ç×Ê”
+ksquid:UselessImportCheck"IRemove this unused import 'com.keiis.hanjul.judgement.JudgementActivity'.(Ê¼ó¸
+Tsquid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ
+bsquid:S1192"HDefine a constant instead of duplicating this literal "user_no" 3 times.(Ù²ûÕúÿÿÿÿ
+vsquid:S1188"\Reduce this anonymous class number of lines from 27 to at most 20, or make it a named class.(¶ÕÜ¯ûÿÿÿÿ
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¨Œşÿÿÿÿ
+qsquid:S1188"\Reduce this anonymous class number of lines from 64 to at most 20, or make it a named class.(âÊ¥Ä
+osquid:UselessImportCheck"MRemove this unused import 'com.keiis.hanjul.NetworkService.JudgementService'.(Ğ– Ø
+hsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(Ê¾Îüÿÿÿÿ
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸„˜‰ûÿÿÿÿ
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸„˜‰ûÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ãùË«øÿÿÿÿ

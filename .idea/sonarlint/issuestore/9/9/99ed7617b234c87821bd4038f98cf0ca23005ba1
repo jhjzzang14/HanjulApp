@@ -1,0 +1,8 @@
+
+hsquid:S1132"LMove the "rating" string literal on the left side of this string comparison.(Ää÷ﬁ8µç¿ ·+
+ñsquid:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(û¶õÕ
+jsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(©Ê¸û8È¨ø ·+
+hsquid:S1132"MMove the "process" string literal on the left side of this string comparison.(à•˝I8µç¿ ·+
+õsquid:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ωƒ≥Ô˛ˇˇˇˇ
+gsquid:S1132"KMove the "order" string literal on the left side of this string comparison.(ëÒèÙ8µç¿ ·+
+psquid:S1132"OMove the "numbering" string literal on the left side of this string comparison.(Ìúë”˘ˇˇˇˇ8µç¿ ·+

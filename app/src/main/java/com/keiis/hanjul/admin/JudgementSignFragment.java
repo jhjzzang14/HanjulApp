@@ -50,7 +50,7 @@ public class JudgementSignFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 0;
+            return 1;
         }
 
         @Override
@@ -67,9 +67,9 @@ public class JudgementSignFragment extends Fragment {
         public View getView(int position, View convertView, ViewGroup parent) {
 
             //테이블 목록
-            //View view = inflater.inflate()
+            View view = inflater.inflate(R.layout.adapter_jugdement_sign_list,null);
 
-            return null;
+            return view;
         }
     }
 }

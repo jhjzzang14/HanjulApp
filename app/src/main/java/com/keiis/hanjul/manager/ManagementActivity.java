@@ -33,12 +33,16 @@ public class ManagementActivity extends AppCompatActivity {
     @BindView(R.id.viewpager)
     ViewPager viewPager;
 
+    private String contents_name;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_management);
 
         ButterKnife.bind(this);
+
+        contents_name = getIntent().getStringExtra("contents_name");
 
         titleView.setText("Admin");
 
@@ -48,6 +52,13 @@ public class ManagementActivity extends AppCompatActivity {
         viewPager.setAdapter(new ManagementAdapter(getSupportFragmentManager()));
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        if(contents_name.equals("signment")){
+            viewPager.setCurrentItem(0);
+        }else if(contents_name.equals("password")){
+            viewPager.setCurrentItem(1);
+        }
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

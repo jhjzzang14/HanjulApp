@@ -1,5 +1,6 @@
 package com.keiis.hanjul.user;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -15,6 +16,9 @@ import com.keiis.hanjul.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by kyh on 2017-01-29.
@@ -33,6 +37,7 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_v01);
 
+        ButterKnife.bind(this);
         //TabLayout userTab = (TabLayout)findViewById(R.id.userTab);
         //userTab.setTabMode(TabLayout.MODE_FIXED);
 
@@ -45,6 +50,14 @@ public class UserActivity extends AppCompatActivity {
         mainFragmentAdapter = new MainFragmentAdapter(getSupportFragmentManager());
         setUpViewPager(userViewpager, mainFragmentAdapter); //viewPager에  adapter를 달아준다.
         userTab.setupWithViewPager(userViewpager);
+    }
+
+    //ID/PWD 찾기
+    @OnClick(R.id.btn_search)
+    void actionSearch(){
+        Intent intent = new Intent(UserActivity.this, UserConfirmActivity.class);
+
+        startActivity(intent);
     }
 
     private void setToolbar(){

@@ -26,12 +26,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="등수부여"
+            android:layout_margin="5dp"
             android:background="@color/colorWhite"/>
         <Button
             android:id="@+id/btn_rank_cancle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="등수취소"
+            android:layout_margin="5dp"
             android:background="@color/colorWhite"/>
 
     </LinearLayout>
@@ -57,12 +59,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="대상부여"
+            android:layout_margin="5dp"
             android:background="@color/colorWhite"/>
         <Button
             android:id="@+id/btn_object_cancle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="대상취소"
+            android:layout_margin="5dp"
             android:background="@color/colorWhite"/>
 
     </LinearLayout>
@@ -88,12 +92,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="등급부여"
+            android:layout_margin="5dp"
             android:background="@color/colorWhite"/>
         <Button
             android:id="@+id/btn_rating_cancle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="등급취소"
+            android:layout_margin="5dp"
             android:background="@color/colorWhite"/>
 
     </LinearLayout>

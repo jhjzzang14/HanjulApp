@@ -50,7 +50,6 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="마감일시 문자 발송"
-        android:background="@color/colorWhite"
         android:layout_gravity="center"
         />
 
@@ -79,7 +78,6 @@
         android:id="@+id/btn_modify"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
         android:text="마감일시 변경"
         android:layout_gravity="center"
         />

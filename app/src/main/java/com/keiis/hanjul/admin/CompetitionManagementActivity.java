@@ -22,6 +22,7 @@ public class CompetitionManagementActivity extends AppCompatActivity {
     @BindView(R.id.tab_competition)
     TabLayout tabLayout;
 
+    private String contentsName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class CompetitionManagementActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        contentsName = getIntent().getStringExtra("contents_name");
+
         titleView.setText("대회관리");
 
         tabLayout.addTab(tabLayout.newTab().setText("배번관리"));
@@ -37,6 +40,14 @@ public class CompetitionManagementActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("심판승인"));
 
         viewPager.setAdapter(new CompetitionManagementAdapter(getSupportFragmentManager()));
+
+        if(contentsName.equals("dividend")){
+            viewPager.setCurrentItem(0);
+        }else if(contentsName.equals("deadline")){
+            viewPager.setCurrentItem(1);
+        }else if(contentsName.equals("judgement_sign")){
+            viewPager.setCurrentItem(2);
+        }
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 

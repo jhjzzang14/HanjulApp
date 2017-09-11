@@ -22,6 +22,10 @@ import butterknife.ButterKnife;
 
 public class ParticipationOrganizationSubjectFragment extends Fragment{
 
+    @BindView(R.id.subject_1)
+    TextView subject1View;
+    @BindView(R.id.subject_2)
+    TextView subject2View;
     @BindView(R.id.list_view)
     ListView listView;
 
@@ -29,9 +33,13 @@ public class ParticipationOrganizationSubjectFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_participation_organization,container,false);
+        View view = inflater.inflate(R.layout.fragment_participation,container,false);
 
         ButterKnife.bind(this,view);
+
+        subject1View.setText("단체명");
+
+        subject2View.setText("참가인원");
 
         listView.setAdapter(new FragmentAdapter());
 
@@ -65,7 +73,7 @@ public class ParticipationOrganizationSubjectFragment extends Fragment{
         public View getView(int position, View convertView, ViewGroup parent) {
 
             //테이블 목록
-            View view = inflater.inflate(R.layout.adapter_table_list_row3,parent,false);
+            View view = inflater.inflate(R.layout.adapter_table_list_row2,parent,false);
 
             return view;
         }

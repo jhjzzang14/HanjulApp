@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             tools:text="Login ID"
             android:padding="5dp"
-            android:background="@color/colorWhite"
+            android:background="@drawable/et_border"
             android:layout_marginRight="40dp"
             />
     </LinearLayout>
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="40dp"
-            android:background="@color/colorWhite"
+            android:background="@drawable/et_border"
             />
     </LinearLayout>
 
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="40dp"
-            android:background="@color/colorWhite"
+            android:background="@drawable/et_border"
             />
     </LinearLayout>
 
@@ -124,7 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="40dp"
-            android:background="@color/colorWhite"
+            android:background="@drawable/et_border"
             />
     </LinearLayout>
 
@@ -153,7 +153,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="40dp"
-            android:background="@color/colorWhite"
+            android:background="@drawable/et_border"
             />
     </LinearLayout>
 
@@ -182,7 +182,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="40dp"
-            android:background="@color/colorWhite"
+            android:background="@drawable/et_border"
             />
     </LinearLayout>
 </LinearLayout>

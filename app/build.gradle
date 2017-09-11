@@ -53,4 +53,7 @@ dependencies {
     compile 'ua.in.iua:thesimplestpageindicator:1.0.0'
 
     compile 'com.android.support:recyclerview-v7:25.0.+'
+
+    //다이알로그
+    compile 'com.orhanobut:dialogplus:1.11@aar'
 }

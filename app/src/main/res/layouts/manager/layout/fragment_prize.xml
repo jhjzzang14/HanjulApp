@@ -13,25 +13,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="종목선택*"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <Spinner
             android:id="@+id/sp_select_item"
-            android:layout_width="180dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"></Spinner>
         <Button
             android:id="@+id/btn_prize_grant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/colorWhite"
             android:text="상장번호 부여"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="220dp"
+        android:layout_marginLeft="150dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -45,7 +44,6 @@
             android:id="@+id/btn_prize_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
             android:text="상장번호 초기화"/>
 
     </LinearLayout>
@@ -61,11 +59,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="단체*"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <Spinner
             android:id="@+id/sp_group"
-            android:layout_width="120dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"></Spinner>
 
 
@@ -78,48 +76,80 @@
             android:layout_margin="5dp"
             android:text="검색"
             android:textColor="@color/colorWhite"
-            android:textSize="20dp" />
+            android:textSize="16dp"
+            />
 
         <Button
             android:id="@+id/btn_mail_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/colorWhite"
             android:text="상장번호 초기화"/>
     </LinearLayout>
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        android:stretchColumns="*">
-        <TableRow>
+        android:stretchColumns="*"
+        android:layout_margin="10dp"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88246ee8"
+            android:gravity="center"
+            android:padding="10dp"
+            android:weightSum="5"
+            >
             <CheckBox
                 android:id="@+id/check_group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="단체면"/>
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="지도자" />
+                android:text="단체면"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="상장수"/>
+                android:textColor="#333333"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="지도자"
+                android:layout_weight="1"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="전화번호"/>
+                android:textColor="#333333"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="상장수"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="전화번호"
+                android:layout_weight="1"
+                />
         </TableRow>
         <ListView
             android:layout_width="match_parent"

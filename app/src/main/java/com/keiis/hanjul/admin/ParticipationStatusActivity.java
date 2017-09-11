@@ -34,7 +34,7 @@ public class ParticipationStatusActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("단체별"));
         tabLayout.addTab(tabLayout.newTab().setText("종목별"));
         tabLayout.addTab(tabLayout.newTab().setText("참가부"));
-        tabLayout.addTab(tabLayout.newTab().setText("단체부"));
+        tabLayout.addTab(tabLayout.newTab().setText("단체전"));
 
         viewPager.setAdapter(new ParticipationStatusAdapter(getSupportFragmentManager()));
 
