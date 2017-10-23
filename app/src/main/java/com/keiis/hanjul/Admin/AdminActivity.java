@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 import com.keiis.hanjul.R;
+import com.keiis.hanjul.user.UserActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,7 +28,14 @@ public class AdminActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        titleView.setText("Admin");
+        titleView.setText("관리자");
+    }
+
+    @OnClick(R.id.my_info)
+    void actionMyInfo(){
+        Intent intent = new Intent(AdminActivity.this, UserActivity.class);
+
+        startActivity(intent);
     }
 
     @OnClick(R.id.menu)

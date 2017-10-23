@@ -90,6 +90,8 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, UserActivity.class);
 
             startActivity(intent);
+        }else if(id.equals("password")){
+
         }else{
             Toast.makeText(LoginActivity.this, "아이디가 일치 하지 않습니다", Toast.LENGTH_SHORT).show();
         }
