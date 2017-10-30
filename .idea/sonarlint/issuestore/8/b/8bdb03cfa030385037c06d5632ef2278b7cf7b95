@@ -1,7 +1,7 @@
 
-hsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(²«²™ûÿÿÿÿ
-Usquid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äþÿÿÿÿ
-osquid:S1192"NDefine a constant instead of duplicating this literal "contents_name" 6 times.(ø¤åæýÿÿÿÿ8ƒð©©ß+
+Ysquid:S1213"8Move this variable to comply with Java Code Conventions.(ºÔ’ßûÿÿÿÿ8ã Ù—â+
 Ysquid:S1213"8Move this variable to comply with Java Code Conventions.(šÙÂÈþÿÿÿÿ8ªÂÛ“â+
 Ysquid:UselessImportCheck"2Remove this unused import 'android.widget.Button'.(²òžýÿÿÿÿ
-Ysquid:S1213"8Move this variable to comply with Java Code Conventions.(ºÔ’ßûÿÿÿÿ8ã Ù—â+
+Usquid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äþÿÿÿÿ
+osquid:S1192"NDefine a constant instead of duplicating this literal "contents_name" 6 times.(ø¤åæýÿÿÿÿ8ƒð©©ß+
+osquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(²«²™ûÿÿÿÿ8Õû—â+

@@ -1,5 +1,5 @@
 
-gsquid:UselessImportCheck"?Remove this unused import 'android.support.v7.app.AlertDialog'.(È­˜ 8Àº—â+
 bsquid:S1226"AIntroduce a new variable instead of reusing the parameter "view".(Îığ­ÿÿÿÿÿ8¼Á´—â+
+gsquid:UselessImportCheck"?Remove this unused import 'android.support.v7.app.AlertDialog'.(È­˜ 8Àº—â+
 squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ë¹˜á8Àº—â+
 ]squid:UselessImportCheck"4Remove this unused import 'android.widget.ListView'.(Œ‰Ö×8Àº—â+
