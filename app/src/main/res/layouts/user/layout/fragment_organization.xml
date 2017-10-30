@@ -121,9 +121,18 @@
             android:id="@+id/et_subLoginPw"
             android:padding="5dp"
             android:textSize="@dimen/et_font_size"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="40dp"
+            android:background="@drawable/et_border"
+            />
+
+        <EditText
+            android:id="@+id/et_subLoginPwConfirm"
+            android:padding="5dp"
+            android:textSize="@dimen/et_font_size"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/et_border"
             />
     </LinearLayout>

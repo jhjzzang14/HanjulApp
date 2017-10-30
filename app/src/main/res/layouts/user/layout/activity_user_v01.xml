@@ -59,7 +59,7 @@
                 <EditText
                     android:id="@+id/et_loginId"
                     android:hint="영문자.특수문자.숫자"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/tv_id"
                     android:background="@drawable/et_border"
@@ -67,7 +67,28 @@
                     android:inputType="text"
                     android:textSize="@dimen/et_font_size"
                     android:padding="5dp"
+                    android:layout_centerVertical="true"
                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true">
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:text="@string/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:text="@string/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
 
@@ -95,7 +116,7 @@
                 <EditText
                     android:id="@+id/et_loginPw"
                     android:textSize="@dimen/et_font_size"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:hint="비밀번호 입력"
                     android:layout_marginRight="40dp"
@@ -103,6 +124,18 @@
                     android:layout_toRightOf="@+id/tv_pw"
                     android:padding="5dp"
                     android:inputType="textPassword"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/btn_confirm"
+                    android:text="재확인"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:inputType="textPassword"
+                    android:layout_toRightOf="@+id/et_loginPw"
                     />
             </RelativeLayout>
         </LinearLayout>
@@ -177,29 +210,6 @@
                     android:layout_centerVertical="true"
                     />
             </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="right"
-            >
-            <Button
-                android:id="@+id/btn_search"
-                android:text="찾기"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/btn_cancel"
-                android:text="@string/cancel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-            <Button
-                android:id="@+id/btn_save"
-                android:text="@string/save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 

@@ -55,9 +55,15 @@ public class LoginActivity extends AppCompatActivity {
     //기록조회 버튼 클릭시
     @OnClick(R.id.btn_record_search) void registerConfirm(){
         //선수관리 화면으로 이동
-        Intent intent = new Intent(LoginActivity.this, OrganizationActivity.class);
+        if(loginId.getText().toString().equals("hanjul01")){
+            getSharedPreferences("user",MODE_PRIVATE).edit().putString("login_id","hanjul01").commit();
+            getSharedPreferences("user",MODE_PRIVATE).edit().putString("user_no","13").commit();
+            Intent intent = new Intent(LoginActivity.this, OrganizationActivity.class);
 
-        startActivity(intent);
+            startActivity(intent);
+        }else{
+            Toast.makeText(LoginActivity.this, "아이디가 일치 하지 않습니다", Toast.LENGTH_SHORT).show();
+        }
     }
 
     //기록등록 버튼 클릭시
@@ -84,6 +90,8 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, UserActivity.class);
 
             startActivity(intent);
+        }else if(id.equals("password")){
+
         }else{
             Toast.makeText(LoginActivity.this, "아이디가 일치 하지 않습니다", Toast.LENGTH_SHORT).show();
         }
