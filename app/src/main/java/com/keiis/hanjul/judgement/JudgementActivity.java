@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,6 +53,9 @@ public class JudgementActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_record)
     Button recordButton;
+
+    @BindView(R.id.progress)
+    ProgressBar progressBar;
 
     private DefaultRestClient<JudgementService> defaultRestClient;
 
@@ -176,6 +180,8 @@ public class JudgementActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<DataContestResult<ContestRetrieve>> call, final Response<DataContestResult<ContestRetrieve>> response) {
                 if(response.isSuccessful()){
+
+                    progressBar.setVisibility(View.GONE);
 
                     final List<ContestRetrieve> contests = response.body().getDataArray();
 

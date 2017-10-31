@@ -14,6 +14,7 @@ public class ExistPlayer {
     private String player_name;
     private String orgn_cd;
     private String uniform_num;
+    private String back_color;
     private String game_degree;
     private String part_cd;
     private String game_part_cd;

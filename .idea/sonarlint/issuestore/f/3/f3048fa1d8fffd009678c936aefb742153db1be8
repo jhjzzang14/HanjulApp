@@ -1,15 +1,15 @@
 
-qsquid:S1188"\Reduce this anonymous class number of lines from 60 to at most 20, or make it a named class.(œ³Û
-`squid:S1192"KDefine a constant instead of duplicating this literal "contest_yy" 3 times.(ß……Á
-]squid:S1192"HDefine a constant instead of duplicating this literal "user_no" 3 times.(ÄïŠõ
-asquid:S1192"LDefine a constant instead of duplicating this literal "contest_seq" 3 times.(´âŞ¨
-ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Õıë¶şÿÿÿÿ
-:squid:S1166"%Either log or rethrow this exception.(”ı¾
 ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Äì¡Óşÿÿÿÿ
 :squid:S1166"%Either log or rethrow this exception.(”ı¾
-:squid:S1166"%Either log or rethrow this exception.(”ı¾
 ›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
-vsquid:S1188"\Reduce this anonymous class number of lines from 41 to at most 20, or make it a named class.(ºíòıÿÿÿÿ
 nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¥ìã§
+]squid:S1192"HDefine a constant instead of duplicating this literal "user_no" 3 times.(ÄïŠõ
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+qsquid:S1188"\Reduce this anonymous class number of lines from 60 to at most 20, or make it a named class.(œ³Û
+`squid:S1192"KDefine a constant instead of duplicating this literal "contest_yy" 3 times.(ß……Á
 `squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ê×¯Š
 gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(˜ıÉ
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Õıë¶şÿÿÿÿ
+vsquid:S1188"\Reduce this anonymous class number of lines from 41 to at most 20, or make it a named class.(ºíòıÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+asquid:S1192"LDefine a constant instead of duplicating this literal "contest_seq" 3 times.(´âŞ¨

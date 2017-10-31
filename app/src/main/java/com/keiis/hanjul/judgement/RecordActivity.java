@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -98,6 +99,9 @@ public class RecordActivity extends AppCompatActivity {
     @BindView(R.id.tv_final_degree)
     TextView finalDegreeTextView;
 
+    @BindView(R.id.progress)
+    ProgressBar progressBar;
+
     private String lastDegree;
 
     private DefaultRestClient<JudgementService> defaultRestClient;
@@ -150,6 +154,9 @@ public class RecordActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<DataResult<ContestGameList>> call, final Response<DataResult<ContestGameList>> response) {
                 if (response.isSuccessful()) {
+
+                    progressBar.setVisibility(View.GONE);
+
                     final List<ContestGameList> contestGameLists = response.body().getDataArray();
 
                     List<String> gameNames = new ArrayList<String>();
@@ -174,7 +181,6 @@ public class RecordActivity extends AppCompatActivity {
 
                         @Override
                         public void onNothingSelected(AdapterView<?> parent) {
-
                         }
                     });
                 }
@@ -225,6 +231,7 @@ public class RecordActivity extends AppCompatActivity {
             jsonObject.put("contest_yy", contestYY);
             jsonObject.put("contest_seq", contestSeq);
             jsonObject.put("game_cd", gameCd);
+            jsonObject.put("people_cnt", peopleCnt);
             jsonObject.put("uniform_num1", player1EditText.getText().toString());
             jsonObject.put("uniform_num2", player2EditText.getText().toString());
             jsonObject.put("uniform_num3", player3EditText.getText().toString());
@@ -262,9 +269,10 @@ public class RecordActivity extends AppCompatActivity {
                         } catch (Exception e) {
                             e.getStackTrace();
                         }
-                    } else {
+                    } else if (response.body().getDataArray().get(0).getAppl_yn().equals("Y")) {
                         player1EditText.setBackgroundColor(Color.rgb(239, 239, 244));
                         player1NameTextView.setText(response.body().getDataArray().get(0).getPlayer_name());
+
                         try {
                             jsonObject1.put("player_seq1", response.body().getDataArray().get(0).getPlayer_seq());
                             jsonObject1.put("uniform_num1", response.body().getDataArray().get(0).getUniform_num());
@@ -273,17 +281,18 @@ public class RecordActivity extends AppCompatActivity {
                         } catch (Exception e) {
                             e.getStackTrace();
                         }
+                    } else {
+                        player1EditText.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.et_border, null));
+                        player1EditText.setText("");
+                        player1NameTextView.setText("");
                     }
 
-                    for (ExistPlayer existPlayer : response.body().getDataArray()) {
-                        if (existPlayer.getAppl_yn().equals("N") || existPlayer.getAppl_yn().equals("Y") || existPlayer.getPart_rope_cnt().equals("0")) {
-                            recordSaveButton.setEnabled(true);
-                            recordSaveButton.setBackgroundColor(Color.rgb(254, 94, 0));
-                        } else if (!existPlayer.getPart_rope_cnt().equals("0")) {
-                            recordSaveButton.setEnabled(false);
-                            recordSaveButton.setBackgroundColor(Color.rgb(239, 239, 244));
-                            break;
-                        }
+                    if(response.body().getResult().getSaveFlag().equals("OK")){
+                        recordSaveButton.setEnabled(true);
+                        recordSaveButton.setBackgroundColor(Color.rgb(254, 94, 0));
+                    }else{
+                        recordSaveButton.setEnabled(false);
+                        recordSaveButton.setBackgroundColor(Color.rgb(239, 239, 244));
                     }
                 }
             }
@@ -301,16 +310,22 @@ public class RecordActivity extends AppCompatActivity {
 
     //선수 2인 이상 확인시 서버 전송
     void setPeopleConfirm() {
+
+        progressBar.setVisibility(View.GONE);
+
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("user_no", userNo);
             jsonObject.put("contest_yy", contestYY);
             jsonObject.put("contest_seq", contestSeq);
             jsonObject.put("game_cd", gameCd);
+            jsonObject.put("people_cnt", peopleCnt);
             jsonObject.put("uniform_num1", player1EditText.getText().toString());
             jsonObject.put("uniform_num2", player2EditText.getText().toString());
             jsonObject.put("uniform_num3", player3EditText.getText().toString());
             jsonObject.put("uniform_num4", player4EditText.getText().toString());
+
+            Log.d("Result", jsonObject.toString());
 
         } catch (Exception e) {
             e.getStackTrace();
@@ -322,17 +337,14 @@ public class RecordActivity extends AppCompatActivity {
         commit.enqueue(new Callback<DataResult<ExistPlayer>>() {
             @Override
             public void onResponse(Call<DataResult<ExistPlayer>> call, Response<DataResult<ExistPlayer>> response) {
-                List<Integer> list = new ArrayList<Integer>();
-                for (int i = 0; i < response.body().getDataArray().size(); i++) {
-                    list.add(0);
-                }
+
                 if (response.isSuccessful()) {
 
                     setInit();
-                    Log.d("result", response.body().getDataArray().toString());
+
                     for (ExistPlayer existPlayer : response.body().getDataArray()) {
                         if (existPlayer.getPlayer_idx().equals("PLAYER_1")) {
-                            list.add(0,1);
+
                             if (!existPlayer.getPart_rope_cnt().equals("0")) {
                                 player1EditText.setBackgroundColor(Color.RED);
                                 String message = "[" + existPlayer.getPlayer_name() + " - " + player1EditText.getText().toString() + "] 선수는" +
@@ -341,6 +353,7 @@ public class RecordActivity extends AppCompatActivity {
                             } else if (existPlayer.getAppl_yn().equals("N")) {
                                 player1EditText.setBackgroundColor(Color.YELLOW);
                                 player1NameTextView.setText(existPlayer.getPlayer_name());
+
 
                                 Toast.makeText(RecordActivity.this, "종목신청이 되지 않은 선수입니다.", Toast.LENGTH_SHORT).show();
 
@@ -352,7 +365,7 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
-                            } else {
+                            } else if (existPlayer.getAppl_yn().equals("Y")) {
                                 //player1EditText.setEnabled(false);
                                 player1EditText.setBackgroundColor(Color.rgb(239, 239, 244));
                                 player1NameTextView.setText(existPlayer.getPlayer_name());
@@ -364,9 +377,13 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
+                            } else {
+                                player1EditText.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.et_border, null));
+                                player1EditText.setText("");
+                                player1NameTextView.setText("");
                             }
                         } else if (existPlayer.getPlayer_idx().equals("PLAYER_2")) {
-                            list.add(1,1);
+
                             if (!existPlayer.getPart_rope_cnt().equals("0")) {
                                 player2EditText.setBackgroundColor(Color.RED);
                                 String message = "[" + existPlayer.getPlayer_name() + " - " + player2EditText.getText().toString() + "] 선수는" +
@@ -386,7 +403,7 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
-                            } else {
+                            } else if (existPlayer.getAppl_yn().equals("Y")) {
                                 //player1EditText.setEnabled(false);
                                 player2EditText.setBackgroundColor(Color.rgb(239, 239, 244));
                                 player2NameTextView.setText(existPlayer.getPlayer_name());
@@ -398,9 +415,13 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
+                            } else {
+                                player2EditText.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.et_border, null));
+                                player2EditText.setText("");
+                                player2NameTextView.setText("");
                             }
                         } else if (existPlayer.getPlayer_idx().equals("PLAYER_3")) {
-                            list.add(2,1);
+
                             if (!existPlayer.getPart_rope_cnt().equals("0")) {
                                 player3EditText.setBackgroundColor(Color.RED);
                                 String message = "[" + existPlayer.getPlayer_name() + " - " + player3EditText.getText().toString() + "] 선수는" +
@@ -420,7 +441,7 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
-                            } else {
+                            } else if (existPlayer.getAppl_yn().equals("Y")) {
                                 //player1EditText.setEnabled(false);
                                 player3EditText.setBackgroundColor(Color.rgb(239, 239, 244));
                                 player3NameTextView.setText(existPlayer.getPlayer_name());
@@ -432,9 +453,13 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
+                            } else {
+                                player3EditText.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.et_border, null));
+                                player3EditText.setText("");
+                                player3NameTextView.setText("");
                             }
                         } else if (existPlayer.getPlayer_idx().equals("PLAYER_4")) {
-                            list.add(3,1);
+
                             if (!existPlayer.getPart_rope_cnt().equals("0")) {
                                 player4EditText.setBackgroundColor(Color.RED);
                                 String message = "[" + existPlayer.getPlayer_name() + " - " + player4EditText.getText().toString() + "] 선수는" +
@@ -454,7 +479,7 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
-                            } else {
+                            } else if (existPlayer.getAppl_yn().equals("Y")) {
                                 //player1EditText.setEnabled(false);
                                 player4EditText.setBackgroundColor(Color.rgb(239, 239, 244));
                                 player4NameTextView.setText(existPlayer.getPlayer_name());
@@ -466,30 +491,23 @@ public class RecordActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.getStackTrace();
                                 }
-                            }
-                        }
-                    }
-                    Log.d("count",list.toString());
-                    for (int i = 0; i < list.size(); i++) {
-                        if(i==0){
-                            if (list.get(0) == 0) {
-                                player1EditText.setBackgroundColor(Color.RED);
-                            }
-                        }else if(i == 1){
-                            if (list.get(1) == 0) {
-                                player2EditText.setBackgroundColor(Color.RED);
-                            }
-                        }else if(i == 2){
-                            if (list.get(2) == 0) {
-                                player3EditText.setBackgroundColor(Color.RED);
-                            }
-                        }else if(i == 3){
-                            if (list.get(3) == 0) {
-                                player4EditText.setBackgroundColor(Color.RED);
+                            } else {
+                                player4EditText.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.et_border, null));
+                                player4EditText.setText("");
+                                player4NameTextView.setText("");
                             }
                         }
                     }
 
+                    if(response.body().getResult().getSaveFlag().equals("OK")){
+                        recordSaveButton.setEnabled(true);
+                        recordSaveButton.setBackgroundColor(Color.rgb(254, 94, 0));
+                    }else{
+                        recordSaveButton.setEnabled(false);
+                        recordSaveButton.setBackgroundColor(Color.rgb(239, 239, 244));
+                    }
+
+                    progressBar.setVisibility(View.GONE);
                 }
             }
 
@@ -568,7 +586,10 @@ public class RecordActivity extends AppCompatActivity {
     @OnClick(R.id.btn_record_save)
     void actionSave() {
 
+        progressBar.setVisibility(View.VISIBLE);
+
         if (recordEditText.getText().toString().equals("")) {
+            progressBar.setVisibility(View.GONE);
             Toast.makeText(RecordActivity.this, "기록을 입력하십시오", Toast.LENGTH_SHORT).show();
         } else {
             try {
@@ -605,6 +626,8 @@ public class RecordActivity extends AppCompatActivity {
                         }
 
                         setPeopleSetting(peopleCnt);
+
+                        progressBar.setVisibility(View.GONE);
                     }
                 }
 

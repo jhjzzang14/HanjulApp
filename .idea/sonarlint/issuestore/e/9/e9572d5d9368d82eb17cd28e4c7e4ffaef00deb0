@@ -1,11 +1,11 @@
 
-Usquid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äþÿÿÿÿ
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½Ä³ïþÿÿÿÿ
-zsquid:S00116"XRename this field "contents_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ô—¾ûÿÿÿÿ8¼ü«¨ß+
-hsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(ÐãÏ¤øÿÿÿÿ
+osquid:S1132"NMove the "signment" string literal on the left side of this string comparison.(™ñýÁúÿÿÿÿ8ÕøÜö+
+zsquid:S00116"XRename this field "contents_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ô—¾ûÿÿÿÿ8ÕøÜö+
 ^squid:UselessImportCheck"7Remove this unused import 'android.widget.BaseAdapter'.(ŒŸà“ýÿÿÿÿ
-osquid:S1132"NMove the "signment" string literal on the left side of this string comparison.(™ñýÁúÿÿÿÿ8¢ƒ¾Êá+
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½Ä³ïþÿÿÿÿ
 Usquid:UselessImportCheck"3Remove this unused import 'android.view.ViewGroup'.(‹îá
-}squid:S1450"\Remove the "contents_name" field and declare it as a local variable in the relevant methods.(¬ô—¾ûÿÿÿÿ8è¡¬¨ß+
 –squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ž¦›Í
-jsquid:S1132"NMove the "password" string literal on the left side of this string comparison.(æ¨ÐÍ8ŠÑ»Êá+
+Usquid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äþÿÿÿÿ
+}squid:S1450"\Remove the "contents_name" field and declare it as a local variable in the relevant methods.(¬ô—¾ûÿÿÿÿ8ÕøÜö+
+jsquid:S1132"NMove the "password" string literal on the left side of this string comparison.(æ¨ÐÍ8ÕøÜö+
+hsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(ÐãÏ¤øÿÿÿÿ

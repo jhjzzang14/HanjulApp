@@ -1,7 +1,7 @@
 
-Ysquid:S1213"8Move this variable to comply with Java Code Conventions.(ºÔ’ßûÿÿÿÿ8ã Ù—â+
-Ysquid:S1213"8Move this variable to comply with Java Code Conventions.(šÙÂÈşÿÿÿÿ8ªÂÛ“â+
-Ysquid:UselessImportCheck"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ
-Usquid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ
-osquid:S1192"NDefine a constant instead of duplicating this literal "contents_name" 6 times.(ø¤åæıÿÿÿÿ8ƒğ©©ß+
-osquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(²«²™ûÿÿÿÿ8Õû—â+
+Ysquid:S1213"8Move this variable to comply with Java Code Conventions.(šÙÂÈşÿÿÿÿ8ïª¯Şö+
+\squid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ8ïª¯Şö+
+osquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(²«²™ûÿÿÿÿ8ïª¯Şö+
+osquid:S1192"NDefine a constant instead of duplicating this literal "contents_name" 6 times.(ø¤åæıÿÿÿÿ8ïª¯Şö+
+Ysquid:S1213"8Move this variable to comply with Java Code Conventions.(ºÔ’ßûÿÿÿÿ8ïª¯Şö+
+`squid:UselessImportCheck"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8ïª¯Şö+

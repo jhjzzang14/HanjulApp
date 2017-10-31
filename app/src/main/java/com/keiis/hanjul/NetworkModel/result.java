@@ -15,4 +15,5 @@ import lombok.NoArgsConstructor;
 public class result {
     private String resultMsg;
     private String resultCd;
+    private String saveFlag;
 }

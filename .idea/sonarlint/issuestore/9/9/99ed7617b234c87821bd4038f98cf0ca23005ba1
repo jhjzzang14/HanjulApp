@@ -1,8 +1,8 @@
 
+hsquid:S1132"LMove the "rating" string literal on the left side of this string comparison.(€ŠÖŞ8Ÿó·ßö+
+gsquid:S1132"KMove the "order" string literal on the left side of this string comparison.(‘ñô8Ÿó·ßö+
+psquid:S1132"OMove the "numbering" string literal on the left side of this string comparison.(íœ‘Óùÿÿÿÿ8Ÿó·ßö+
 ›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½Ä³ïşÿÿÿÿ
-hsquid:S1132"LMove the "rating" string literal on the left side of this string comparison.(€ŠÖŞ8µÀÊá+
+hsquid:S1132"MMove the "process" string literal on the left side of this string comparison.(ˆ¥ıI8Ÿó·ßö+
 –squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦›Í
-gsquid:S1132"KMove the "order" string literal on the left side of this string comparison.(‘ñô8µÀÊá+
-psquid:S1132"OMove the "numbering" string literal on the left side of this string comparison.(íœ‘Óùÿÿÿÿ8µÀÊá+
-hsquid:S1132"MMove the "process" string literal on the left side of this string comparison.(ˆ¥ıI8µÀÊá+
-jsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(©æü8ÿ¥µÖö+
+jsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(©æü8Ÿó·ßö+

@@ -52,6 +52,7 @@ public class UserActivity extends AppCompatActivity {
         userTab.setupWithViewPager(userViewpager);
     }
 
+/*
     //ID/PWD 찾기
     @OnClick(R.id.btn_search)
     void actionSearch(){
@@ -59,6 +60,7 @@ public class UserActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+*/
 
     private void setToolbar(){
         setSupportActionBar(userToolbar); //AooCompatActivity actionbar를 설정

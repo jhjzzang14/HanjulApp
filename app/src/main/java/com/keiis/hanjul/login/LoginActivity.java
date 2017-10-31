@@ -14,6 +14,7 @@ import com.keiis.hanjul.judgement.JudgementActivity;
 import com.keiis.hanjul.manager.ManagerActivity;
 import com.keiis.hanjul.organazation.OrganizationActivity;
 import com.keiis.hanjul.user.UserActivity;
+import com.keiis.hanjul.user.UserConfirmActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -91,7 +92,9 @@ public class LoginActivity extends AppCompatActivity {
 
             startActivity(intent);
         }else if(id.equals("password")){
+            Intent intent = new Intent(LoginActivity.this, UserConfirmActivity.class);
 
+            startActivity(intent);
         }else{
             Toast.makeText(LoginActivity.this, "아이디가 일치 하지 않습니다", Toast.LENGTH_SHORT).show();
         }

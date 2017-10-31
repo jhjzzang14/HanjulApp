@@ -1,4 +1,4 @@
 
-Psquid:S1854";Remove this useless assignment to local variable "subject".(§É¨À
+Fsquid:S1481"1Remove this unused "organization" local variable.(Ç€å 
 ›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×þÿÿÿÿ
-Asquid:S1481",Remove this unused "subject" local variable.(§É¨À
+Usquid:S1854"@Remove this useless assignment to local variable "organization".(Ç€å 

@@ -5,12 +5,31 @@
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="#000000"
+    android:padding="1dp"
     >
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:paddingRight="30dp"
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:paddingRight="1dp"
+            >
     <CheckBox
         android:id="@+id/cb_select"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        />
+        </FrameLayout>
 
     <TextView
         android:id="@+id/tv_agentCd"
@@ -25,5 +44,7 @@
         android:textSize="@dimen/user_et_font_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 </LinearLayout>

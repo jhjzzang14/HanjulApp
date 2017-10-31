@@ -1,0 +1,30 @@
+
+qsquid:S00116"VRename this field "game_degree" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É•êùÿÿÿÿ
+psquid:S00116"URename this field "contest_yy" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·£§¹úÿÿÿÿ
+psquid:S00116"URename this field "player_idx" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÃ»¤ıÿÿÿÿ
+ssquid:S00116"XRename this field "part_rope_cnt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²®Íêüÿÿÿÿ
+msquid:S00116"RRename this field "part_cd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”°øòøÿÿÿÿ
+gsquid:S00116"RRename this field "appl_yn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÊ™(
+lsquid:S00116"VRename this field "contest_seq" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥—ÜÅ
+msquid:S00116"RRename this field "orgn_cd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ¦Â‚ÿÿÿÿÿ
+rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ŸÁ³«ûÿÿÿÿ
+rsquid:S00116"WRename this field "game_part_cd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùù© øÿÿÿÿ
+lsquid:S00116"VRename this field "player_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êïì
+hsquid:S00116"RRename this field "game_cd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ËÜ¯
+ksquid:S00116"URename this field "player_seq" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µï
+wsquid:S00116"URename this field "back_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÍõıÿÿÿÿ8¯İó‰÷+
+qsquid:S00116"VRename this field "uniform_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¿’ûÿÿÿÿ
+Ksquid:S1068"/Remove this unused "player_name" private field.(Êïì8‘™¦Œ÷+
+Lsquid:S1068"+Remove this unused "orgn_cd" private field.(ÿ¦Â‚ÿÿÿÿÿ8‘™¦Œ÷+
+Psquid:S1068"/Remove this unused "uniform_num" private field.(¼¿’ûÿÿÿÿ8‘™¦Œ÷+
+Osquid:S1068".Remove this unused "back_color" private field.(ŸÍõıÿÿÿÿ8‘™¦Œ÷+
+Psquid:S1068"/Remove this unused "game_degree" private field.(É•êùÿÿÿÿ8‘™¦Œ÷+
+Lsquid:S1068"+Remove this unused "part_cd" private field.(”°øòøÿÿÿÿ8‘™¦Œ÷+
+Qsquid:S1068"0Remove this unused "game_part_cd" private field.(ùù© øÿÿÿÿ8‘™¦Œ÷+
+Osquid:S1068".Remove this unused "player_idx" private field.(ìÃ»¤ıÿÿÿÿ8‘™¦Œ÷+
+Gsquid:S1068"+Remove this unused "game_cd" private field.(’ËÜ¯8‘™¦Œ÷+
+Fsquid:S1068"+Remove this unused "appl_yn" private field.(ªÊ™(8‘™¦Œ÷+
+Jsquid:S1068".Remove this unused "player_seq" private field.( µï8‘™¦Œ÷+
+Osquid:S1068".Remove this unused "contest_yy" private field.(·£§¹úÿÿÿÿ8‘™¦Œ÷+
+Ksquid:S1068"/Remove this unused "contest_seq" private field.(¥—ÜÅ8‘™¦Œ÷+
+Rsquid:S1068"1Remove this unused "part_rope_cnt" private field.(²®Íêüÿÿÿÿ8‘™¦Œ÷+

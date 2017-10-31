@@ -4,6 +4,9 @@
 
     <!-- Network Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -20,31 +23,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".user.UserActivity" />
+        <activity android:name=".user.UserActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan"
+            />
         <activity android:name=".user.UserConfirmActivity" />
+        <activity android:name=".manager.ManagementActivity"></activity>
+        <activity android:name=".manager.ManagerActivity"></activity>
         <activity android:name=".judgement.JudgementActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             />
         <activity android:name=".organazation.PlayerManagerActivity" />
         <activity android:name=".organazation.OrganizationActivity"></activity>
-        
         <activity android:name=".admin.AdminActivity" />
-        <activity android:name=".admin.RecordSituationBoardActivity" />
-        <activity android:name=".admin.ParticipationStatusActivity"></activity>
-        <activity android:name=".admin.CompetitionManagementActivity"></activity>
-        
-        <activity android:name=".manager.ManagementActivity"></activity>
-        <activity android:name=".manager.ManagerActivity"></activity>
-        <activity android:name=".manager.SituationBoardActivity"></activity>
-
         <activity android:name=".judgement.RecordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             />
         <activity android:name=".organazation.DividendActiviy" />
         <activity android:name=".organazation.RecordActivity" />
-
+        <activity android:name=".admin.RecordSituationBoardActivity" />
+        <activity android:name=".admin.ParticipationStatusActivity"></activity>
         <activity android:name=".organazation.CompetitionSummaryActivity"></activity>
-
+        <activity android:name=".manager.SituationBoardActivity"></activity>
+        <activity android:name=".admin.CompetitionManagementActivity"></activity>
     </application>
-
 </manifest>

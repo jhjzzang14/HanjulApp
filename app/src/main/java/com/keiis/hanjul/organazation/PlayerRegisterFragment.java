@@ -9,13 +9,16 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import com.keiis.hanjul.R;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.OnItemClickListener;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -25,12 +28,22 @@ import butterknife.OnClick;
 
 public class PlayerRegisterFragment extends Fragment {
 
+    private ArrayAdapter<CharSequence> adpin;
+
+    @BindView(R.id.sp_subject)
+    Spinner spinner;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_player_register,container,false);
 
         ButterKnife.bind(this,view);
+
+        adpin = ArrayAdapter.createFromResource(getActivity(), R.array.user_gubun, android.R.layout.simple_spinner_item);
+        adpin.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adpin);
+
 
         return view;
     }

@@ -1,0 +1,5 @@
+
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(Άχ…Πώÿÿÿÿ
+>squid:S1481")Remove this unused "name" local variable.(°Ξ§
+Msquid:S1854"8Remove this useless assignment to local variable "name".(°Ξ§
+[squid:UselessImportCheck"4Remove this unused import 'android.widget.TextView'.(„Λ‚ÿÿÿÿÿ
