@@ -17,6 +17,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.NetworkModel.ContestRetrieve;
 import com.keiis.hanjul.NetworkModel.DataContestResult;
 import com.keiis.hanjul.NetworkModel.MessageResult;
@@ -65,6 +66,12 @@ public class JudgementActivity extends AppCompatActivity {
 
     private Bundle bundle;
 
+
+    //클래스 이름 가지고 오기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
 
     //기록 등록 버튼 클릭시 이벤트
     @OnClick(R.id.btn_record)
@@ -190,7 +197,9 @@ public class JudgementActivity extends AppCompatActivity {
                     for(ContestRetrieve contestName : contests){
                         contestNames.add(contestName.getSmart_contest_name());
                     }
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(JudgementActivity.this,android.R.layout.simple_spinner_item, contestNames);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(JudgementActivity.this,android.R.layout.simple_spinner_dropdown_item, contestNames);
+
+                    eventVIew.setPrompt("대회목록");
 
                     eventVIew.setAdapter(adapter);
 

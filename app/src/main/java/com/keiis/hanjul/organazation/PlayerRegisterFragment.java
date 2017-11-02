@@ -40,7 +40,7 @@ public class PlayerRegisterFragment extends Fragment {
 
         ButterKnife.bind(this,view);
 
-        adpin = ArrayAdapter.createFromResource(getActivity(), R.array.user_gubun, android.R.layout.simple_spinner_item);
+        adpin = ArrayAdapter.createFromResource(getActivity(), R.array.user_gubun, android.R.layout.simple_spinner_dropdown_item);
         adpin.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adpin);
 

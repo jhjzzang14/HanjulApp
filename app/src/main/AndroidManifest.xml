@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".user.UserActivity"
-            android:windowSoftInputMode="adjustResize|adjustPan"
+            android:windowSoftInputMode="stateHidden|adjustResize"
             />
         <activity android:name=".user.UserConfirmActivity" />
         <activity android:name=".manager.ManagementActivity"></activity>

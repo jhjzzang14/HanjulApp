@@ -2,6 +2,7 @@ package com.keiis.hanjul.organazation;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -23,8 +24,19 @@ import com.keiis.hanjul.NetworkService.DefaultRestClient;
 import com.keiis.hanjul.NetworkService.OrganizationService;
 import com.keiis.hanjul.R;
 
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +57,8 @@ public class RecordSubjectFragment extends Fragment {
 
     @BindView(R.id.sp_subject)
     Spinner spinnerView;
+
+    private List<ResultList> resultLists;
 
     DefaultRestClient<OrganizationService> defaultRestClient;
 
@@ -69,44 +83,52 @@ public class RecordSubjectFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_subject_record,container,false);
+        View view = inflater.inflate(R.layout.fragment_subject_record, container, false);
 
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
 
-        userNo = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE).getString("user_no","13");
+        //엑셀 다운로
+        getActivity().findViewById(R.id.download).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveExcelFile(getActivity(), "기록조회.xls");
+            }
+        });
+
+        userNo = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE).getString("user_no", "13");
 
         defaultRestClient = new DefaultRestClient<>();
 
         organizationService = defaultRestClient.getClient(OrganizationService.class);
 
         JSONObject jsonObject = new JSONObject();
-        try{
-            jsonObject.put("user_no",userNo);
-            jsonObject.put("contest_yy",contestYY);
-            jsonObject.put("contest_seq",contestSeq);
-            jsonObject.put("people_cnt","30");
-        }catch (Exception e){
+        try {
+            jsonObject.put("user_no", userNo);
+            jsonObject.put("contest_yy", contestYY);
+            jsonObject.put("contest_seq", contestSeq);
+            jsonObject.put("people_cnt", "30");
+        } catch (Exception e) {
             e.getStackTrace();
         }
 
         //대회 종목 목록 조회
-        Call<DataResult<ContestGameList>> commit = organizationService.setContestGameList("ContestGameList",jsonObject);
+        Call<DataResult<ContestGameList>> commit = organizationService.setContestGameList("ContestGameList", jsonObject);
 
         commit.enqueue(new Callback<DataResult<ContestGameList>>() {
             @Override
             public void onResponse(Call<DataResult<ContestGameList>> call, Response<DataResult<ContestGameList>> response) {
-                if(response.isSuccessful()){
-                    Log.d("결과",response.body().getDataArray().toString());
+                if (response.isSuccessful()) {
+                    Log.d("결과", response.body().getDataArray().toString());
 
                     final List<ContestGameList> contests = response.body().getDataArray();
 
                     List<String> contestNames = new ArrayList<String>();
                     //대회 목록 저장
-                    for(ContestGameList gameList : contests){
+                    for (ContestGameList gameList : contests) {
                         contestNames.add(gameList.getGame_name());
                     }
 
-                    final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, contestNames);
+                    final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, contestNames);
 
                     spinnerView.setAdapter(adapter);
 
@@ -117,28 +139,28 @@ public class RecordSubjectFragment extends Fragment {
                             gameCd = contests.get(position).getGame_cd();
 
                             JSONObject jsonObject = new JSONObject();
-                            try{
-                                jsonObject.put("user_no",userNo);
-                                jsonObject.put("contest_yy",contestYY);
-                                jsonObject.put("contest_seq",contestSeq);
-                                jsonObject.put("result_gubn","ORGN");
-                                jsonObject.put("orgn_cd",organCd);
-                                jsonObject.put("game_cd",gameCd);
-                                jsonObject.put("player_name","");
-                            }catch (Exception e){
+                            try {
+                                jsonObject.put("user_no", userNo);
+                                jsonObject.put("contest_yy", contestYY);
+                                jsonObject.put("contest_seq", contestSeq);
+                                jsonObject.put("result_gubn", "ORGN");
+                                jsonObject.put("orgn_cd", organCd);
+                                jsonObject.put("game_cd", gameCd);
+                                jsonObject.put("player_name", "");
+                            } catch (Exception e) {
                                 e.getStackTrace();
                             }
 
-                            Call<RecordDataResult<ResultList>> commit = organizationService.setResultList("ResultList",jsonObject);
+                            Call<RecordDataResult<ResultList>> commit = organizationService.setResultList("ResultList", jsonObject);
                             commit.enqueue(new Callback<RecordDataResult<ResultList>>() {
                                 @Override
                                 public void onResponse(Call<RecordDataResult<ResultList>> call, Response<RecordDataResult<ResultList>> response) {
-                                    if(response.isSuccessful()){
+                                    if (response.isSuccessful()) {
                                         listView.setAdapter(new RecordSubjectAdapter(response.body().getDataArray()));
-                                    }else{
-                                        try{
-                                            Log.d("result",response.errorBody().string());
-                                        }catch (Exception e){
+                                    } else {
+                                        try {
+                                            Log.d("result", response.errorBody().string());
+                                        } catch (Exception e) {
                                             e.getStackTrace();
                                         }
                                     }
@@ -163,21 +185,19 @@ public class RecordSubjectFragment extends Fragment {
 
             @Override
             public void onFailure(Call<DataResult<ContestGameList>> call, Throwable t) {
-                Log.d("result",t.getMessage());
+                Log.d("result", t.getMessage());
             }
         });
         return view;
     }
 
-    class RecordSubjectAdapter extends BaseAdapter{
-
-        private List<ResultList> resultLists;
+    class RecordSubjectAdapter extends BaseAdapter {
 
         private LayoutInflater inflater;
 
-        public RecordSubjectAdapter(List<ResultList> resultLists){
-            this.resultLists = resultLists;
-            inflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        public RecordSubjectAdapter(List<ResultList> resultList) {
+            resultLists = resultList;
+            inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
         @Override
@@ -198,23 +218,118 @@ public class RecordSubjectFragment extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view = inflater.inflate(R.layout.record_subject_list_table_item,parent,false);
+            View view = inflater.inflate(R.layout.record_subject_list_table_item, parent, false);
 
             //참가부 레이블
-            TextView organizationView = (TextView)view.findViewById(R.id.tv_organization);
+            TextView organizationView = (TextView) view.findViewById(R.id.tv_organization);
             //선수명 레이블
-            TextView playerNameView = (TextView)view.findViewById(R.id.tv_player_name);
+            TextView playerNameView = (TextView) view.findViewById(R.id.tv_player_name);
             //개수 레이블
-            TextView countView = (TextView)view.findViewById(R.id.tv_cnt);
+            TextView countView = (TextView) view.findViewById(R.id.tv_cnt);
             //등급 레이블
-            TextView rankView = (TextView)view.findViewById(R.id.tv_rank);
+            TextView rankView = (TextView) view.findViewById(R.id.tv_rank);
 
             organizationView.setText(resultLists.get(position).getPart_name());
             playerNameView.setText(resultLists.get(position).getPlayer_name());
-            countView.setText(resultLists.get(position).getPart_rope_cnt()+"");
+            countView.setText(resultLists.get(position).getPart_rope_cnt() + "");
             rankView.setText(resultLists.get(position).getRank());
             //rankView.setText("rank");
             return view;
         }
     }
+
+    private boolean saveExcelFile(Context context, String fileName) {
+
+        // check if available and not read only
+        if (!isExternalStorageAvailable() || isExternalStorageReadOnly()) {
+
+            return false;
+        }
+
+        boolean success = false;
+
+        // New Workbook
+        Workbook wb = new HSSFWorkbook();
+
+        Cell c = null;
+
+        // New Sheet
+        Sheet sheet1 = null;
+        sheet1 = wb.createSheet("기록조회");
+
+        // Generate column headings
+        Row row = sheet1.createRow(0);
+
+        c = row.createCell(0);
+        c.setCellValue("참가부");
+
+        c = row.createCell(1);
+        c.setCellValue("선수명");
+
+        c = row.createCell(2);
+        c.setCellValue("개수");
+
+        c = row.createCell(3);
+        c.setCellValue("등급");
+
+        int count = 0;
+        for (ResultList resultList : resultLists) {
+            row = sheet1.createRow(count + 1);
+
+            c = row.createCell(0);
+            c.setCellValue(resultList.getPart_name());
+
+            c = row.createCell(1);
+            c.setCellValue(resultList.getPlayer_name());
+
+            c = row.createCell(2);
+            c.setCellValue(resultList.getPart_rope_cnt());
+
+            c = row.createCell(3);
+            c.setCellValue(resultList.getRank());
+
+            count++;
+        }
+
+        // Create a path where we will place our List of objects on external
+        // storage
+        File file = new File(context.getExternalFilesDir(null), fileName);
+        FileOutputStream os = null;
+
+        try {
+            os = new FileOutputStream(file);
+            wb.write(os);
+            Log.w("FileUtils", "Writing file" + file);
+            success = true;
+        } catch (IOException e) {
+            Log.w("FileUtils", "Error writing " + file, e);
+        } catch (Exception e) {
+            Log.w("FileUtils", "Failed to save file", e);
+        } finally {
+            try {
+                if (null != os)
+                    os.close();
+            } catch (Exception ex) {
+            }
+        }
+        return success;
+    }
+
+    public boolean isExternalStorageReadOnly() {
+        String extStorageState = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(extStorageState)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isExternalStorageAvailable() {
+        String extStorageState = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(extStorageState)) {
+            return true;
+        }
+        return false;
+    }
+
+
 }

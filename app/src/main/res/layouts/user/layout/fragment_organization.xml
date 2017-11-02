@@ -1,197 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="10dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
 
-    <!-- ===================================================== -->
-    <!-- 단체명 -->
-    <!-- ===================================================== -->
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        >
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_orgnName"
-            android:text="@string/orgnNameE"
-            android:textSize="@dimen/user_tv_font_size"
-            android:layout_width="@dimen/user_tv_width"
-            android:layout_height="wrap_content"
-            android:textColor="@color/mainColor"
-            />
-
-        <EditText
-            android:id="@+id/et_orgnName"
-            android:textSize="@dimen/et_font_size"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Login ID"
-            android:padding="5dp"
-            android:background="@drawable/et_border"
-            android:layout_marginRight="40dp"
-            />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- ===================================================== -->
+            <!-- 단체명 -->
+            <!-- ===================================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
 
-    <!-- ===================================================== -->
-    <!-- 상장인쇄명 -->
-    <!-- ===================================================== -->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        >
+                <TextView
+                    android:id="@+id/tv_orgnName"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orgnNameE"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/user_tv_font_size" />
 
-        <TextView
-            android:id="@+id/tv_prntOrgnName"
-            android:text="@string/prntOrgnNameE"
-            android:textSize="@dimen/user_tv_font_size"
-            android:layout_width="@dimen/user_tv_width"
-            android:layout_height="wrap_content"
-            android:textColor="@color/mainColor"
-            />
+                <EditText
+                    android:id="@+id/et_orgnName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:textSize="@dimen/et_font_size"
+                    tools:text="Login ID" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_prntOrgnName"
-            android:padding="5dp"
-            tools:text="Password"
-            android:textSize="@dimen/et_font_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/et_border"
-            />
-    </LinearLayout>
+            <!-- ===================================================== -->
+            <!-- 상장인쇄명 -->
+            <!-- ===================================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
 
-    <!-- ===================================================== -->
-    <!-- SUB ID -->
-    <!-- ===================================================== -->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        >
+                <TextView
+                    android:id="@+id/tv_prntOrgnName"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prntOrgnNameE"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/user_tv_font_size" />
 
-        <TextView
-            android:id="@+id/tv_subLoginId"
-            android:text="@string/subLoginId"
-            android:textSize="@dimen/user_tv_font_size"
-            android:layout_width="@dimen/user_tv_width"
-            android:layout_height="wrap_content"
-            android:textColor="@color/mainColor" />
+                <EditText
+                    android:id="@+id/et_prntOrgnName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:textSize="@dimen/et_font_size"
+                    tools:text="Password" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_subLoginId"
-            android:padding="5dp"
-            android:textSize="@dimen/et_font_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/et_border"
-            />
-    </LinearLayout>
+            <!-- ===================================================== -->
+            <!-- SUB ID -->
+            <!-- ===================================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
 
-    <!-- ===================================================== -->
-    <!-- SUB PW -->
-    <!-- ===================================================== -->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        >
+                <TextView
+                    android:id="@+id/tv_subLoginId"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subLoginId"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/user_tv_font_size" />
 
-        <TextView
-            android:id="@+id/tv_subLoginPw"
-            android:text="@string/subLoginPwE"
-            android:textSize="@dimen/user_tv_font_size"
-            android:layout_width="@dimen/user_tv_width"
-            android:layout_height="wrap_content"
-            android:textColor="@color/mainColor" />
+                <EditText
+                    android:id="@+id/et_subLoginId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:textSize="@dimen/et_font_size" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_subLoginPw"
-            android:padding="5dp"
-            android:textSize="@dimen/et_font_size"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/et_border"
-            />
+            <!-- ===================================================== -->
+            <!-- SUB PW -->
+            <!-- ===================================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/et_subLoginPwConfirm"
-            android:padding="5dp"
-            android:textSize="@dimen/et_font_size"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/et_border"
-            />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_subLoginPw"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subLoginPwE"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/user_tv_font_size" />
 
-    <!-- ===================================================== -->
-    <!-- EMAIL -->
-    <!-- ===================================================== -->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        >
+                <EditText
+                    android:id="@+id/et_subLoginPw"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:textSize="@dimen/et_font_size" />
 
-        <TextView
-            android:id="@+id/tv_email"
-            android:text="@string/emailE"
-            android:textSize="@dimen/user_tv_font_size"
-            android:layout_width="@dimen/user_tv_width"
-            android:layout_height="wrap_content"
-            android:textColor="@color/mainColor"/>
+                <EditText
+                    android:id="@+id/et_subLoginPwConfirm"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:textSize="@dimen/et_font_size" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_email"
-            android:padding="5dp"
-            android:textSize="@dimen/et_font_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/et_border"
-            />
-    </LinearLayout>
+            <!-- ===================================================== -->
+            <!-- EMAIL -->
+            <!-- ===================================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
 
-    <!-- ===================================================== -->
-    <!-- 주소 -->
-    <!-- ===================================================== -->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        >
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emailE"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/user_tv_font_size" />
 
-        <TextView
-            android:id="@+id/tv_addr"
-            android:text="@string/addr"
-            android:textSize="@dimen/user_tv_font_size"
-            android:layout_width="@dimen/user_tv_width"
-            android:layout_height="wrap_content"
-            android:textColor="@color/mainColor"/>
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:textSize="@dimen/et_font_size" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_addr"
-            android:padding="5dp"
-            android:textSize="@dimen/et_font_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/et_border"
-            />
-    </LinearLayout>
+            <!-- ===================================================== -->
+            <!-- 주소 -->
+            <!-- ===================================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_addr"
+                    android:layout_width="@dimen/user_tv_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addr"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/user_tv_font_size" />
+
+                <EditText
+                    android:id="@+id/et_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/et_border"
+                    android:padding="5dp"
+                    android:textSize="@dimen/et_font_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

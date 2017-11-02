@@ -1,11 +1,11 @@
 
-Usquid:S1854":Remove this useless assignment to local variable "sentPI".(Ø¤õ+8òÀ²äö+
-Fsquid:S1481"+Remove this unused "sentPI" local variable.(Ø¤õ+8òÀ²äö+
-U"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(Œá˜Ø8¿Ïçãö+
-gsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(Œá˜Ø8¿Ïçãö+
-Lsquid:S1481"0Remove this unused "deliveredPI" local variable.(Ä‰Ô¥8òÀ²äö+
-Nsquid:S1172"2Remove this unused method parameter "phoneNumber".(µıñú8Î’Èäö+
-xsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Àèüÿÿÿÿ8­ÊÚãö+
 [squid:S1854"?Remove this useless assignment to local variable "deliveredPI".(Ä‰Ô¥8òÀ²äö+
-rsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìúëU8­ÊÚãö+
+gsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(Œá˜Ø8¿Ïçãö+
+xsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Àèüÿÿÿÿ8­ÊÚãö+
 Vsquid:UnusedPrivateMethod",Remove this unused private "sendSMS" method.(µıñú8öœÉäö+
+Nsquid:S1172"2Remove this unused method parameter "phoneNumber".(µıñú8Î’Èäö+
+Lsquid:S1481"0Remove this unused "deliveredPI" local variable.(Ä‰Ô¥8òÀ²äö+
+Usquid:S1854":Remove this useless assignment to local variable "sentPI".(Ø¤õ+8òÀ²äö+
+rsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìúëU8­ÊÚãö+
+U"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(Œá˜Ø8¿Ïçãö+
+Fsquid:S1481"+Remove this unused "sentPI" local variable.(Ø¤õ+8òÀ²äö+

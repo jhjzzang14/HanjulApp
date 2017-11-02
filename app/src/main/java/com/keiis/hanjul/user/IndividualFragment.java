@@ -52,6 +52,8 @@ public class IndividualFragment extends Fragment{
                     btnSearch.setEnabled(true);
                     btnSearch.setBackgroundColor(Color.rgb(254,94,0));
                 }
+
+
             }
 
             @Override

@@ -1,27 +1,27 @@
 
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†õÎ¨ÿÿÿÿÿ
 Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(î–»±úÿÿÿÿ
-`squid:S1192"LDefine a constant instead of duplicating this literal "contest_seq" 3 times.(ºïv
-psquid:S1188"\Reduce this anonymous class number of lines from 23 to at most 20, or make it a named class.(è“Ç
-[squid:S1132"FMove the "" string literal on the left side of this string comparison.(Õœó…
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ê¥¾àûÿÿÿÿ
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(·®ş¨üÿÿÿÿ
-csquid:UselessImportCheck"ARemove this unused import 'com.keiis.hanjul.NetworkModel.result'.(¾‹°œ
-qsquid:S1188"\Reduce this anonymous class number of lines from 29 to at most 20, or make it a named class.(âÊ¥Ä
-`squid:S1132"FMove the "" string literal on the left side of this string comparison.(Ï›Âüÿÿÿÿ
-:squid:S1166"%Either log or rethrow this exception.(”ı¾
-ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡ÂŸéùÿÿÿÿ
-ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Õıë¶şÿÿÿÿ
-]squid:S1192"HDefine a constant instead of duplicating this literal "user_no" 3 times.(Óµ¬Ì
-[squid:S1192"GDefine a constant instead of duplicating this literal "result" 3 times.(ğ¨×
 esquid:S1192"KDefine a constant instead of duplicating this literal "contest_yy" 3 times.(Ü•›îúÿÿÿÿ
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Õıë¶şÿÿÿÿ
+`squid:S1132"FMove the "" string literal on the left side of this string comparison.(ò²§ øÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+]squid:S1192"HDefine a constant instead of duplicating this literal "user_no" 3 times.(Óµ¬Ì
+usquid:S1450"`Remove the "defaultRestClient" field and declare it as a local variable in the relevant methods.(èŠ„Ë
+`squid:S1192"LDefine a constant instead of duplicating this literal "contest_seq" 3 times.(ºïv
+hsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(«øÅºÿÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
 `squid:S1132"FMove the "" string literal on the left side of this string comparison.(Õ¸ıàşÿÿÿÿ
 `squid:S1132"FMove the "" string literal on the left side of this string comparison.(Ï›Âüÿÿÿÿ
-:squid:S1166"%Either log or rethrow this exception.(”ı¾
-hsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(«øÅºÿÿÿÿÿ
-:squid:S1166"%Either log or rethrow this exception.(”ı¾
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
-`squid:S1132"FMove the "" string literal on the left side of this string comparison.(ò²§ øÿÿÿÿ
-usquid:S1450"`Remove the "defaultRestClient" field and declare it as a local variable in the relevant methods.(èŠ„Ë
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(·®ş¨üÿÿÿÿ
+csquid:UselessImportCheck"ARemove this unused import 'com.keiis.hanjul.NetworkModel.result'.(¾‹°œ
+psquid:S1188"\Reduce this anonymous class number of lines from 23 to at most 20, or make it a named class.(è“Ç
+qsquid:S1188"\Reduce this anonymous class number of lines from 29 to at most 20, or make it a named class.(âÊ¥Ä
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ê¥¾àûÿÿÿÿ
 bsquid:S1132"HMove the "OK" string literal on the left side of this string comparison.(¾¥û°ûÿÿÿÿ
+`squid:S1132"FMove the "" string literal on the left side of this string comparison.(Ï›Âüÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†õÎ¨ÿÿÿÿÿ
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡ÂŸéùÿÿÿÿ
+[squid:S1192"GDefine a constant instead of duplicating this literal "result" 3 times.(ğ¨×
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+[squid:S1132"FMove the "" string literal on the left side of this string comparison.(Õœó…

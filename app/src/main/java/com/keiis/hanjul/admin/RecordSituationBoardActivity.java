@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class RecordSituationBoardActivity extends AppCompatActivity {
 
@@ -21,6 +23,11 @@ public class RecordSituationBoardActivity extends AppCompatActivity {
 
     @BindView(R.id.viewpager)
     ViewPager viewPager;
+
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

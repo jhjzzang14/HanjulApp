@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class UserConfirmActivity extends AppCompatActivity {
 
@@ -29,6 +31,12 @@ public class UserConfirmActivity extends AppCompatActivity {
 
     @BindView(R.id.userViewpager)
     ViewPager userViewPager;
+
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.userToolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

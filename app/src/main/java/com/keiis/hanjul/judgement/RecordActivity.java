@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.NetworkModel.BodyExistPlayer;
 import com.keiis.hanjul.NetworkModel.ContestGameList;
 import com.keiis.hanjul.NetworkModel.ContestRetrieve;
@@ -113,6 +114,12 @@ public class RecordActivity extends AppCompatActivity {
         finish();
     }
 
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -164,7 +171,9 @@ public class RecordActivity extends AppCompatActivity {
                     for (ContestGameList contestGameList : contestGameLists) {
                         gameNames.add(contestGameList.getGame_name());
                     }
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(RecordActivity.this, android.R.layout.simple_spinner_item, gameNames);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(RecordActivity.this, android.R.layout.simple_spinner_dropdown_item, gameNames);
+
+                    subjectSpinnerVIew.setPrompt("종목");
 
                     subjectSpinnerVIew.setAdapter(adapter);
 

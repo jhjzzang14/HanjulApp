@@ -13,10 +13,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by 장호준 on 2017-05-03.
@@ -34,6 +36,12 @@ public class ManagementActivity extends AppCompatActivity {
     ViewPager viewPager;
 
     private String contents_name;
+
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

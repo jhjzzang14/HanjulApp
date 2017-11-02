@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import butterknife.BindView;
@@ -85,6 +86,12 @@ public class ManagerActivity extends AppCompatActivity {
     @OnClick(R.id.menu)
     void actionMenu(){
         drawerLayout.openDrawer(Gravity.START);
+    }
+
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
     }
 
 

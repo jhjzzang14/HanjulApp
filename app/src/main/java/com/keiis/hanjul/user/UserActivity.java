@@ -10,13 +10,18 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.Window;
+import android.widget.ScrollView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -30,6 +35,12 @@ public class UserActivity extends AppCompatActivity {
     ViewPager userViewpager;
     MainFragmentAdapter mainFragmentAdapter;  //Fragment adapter선언
 
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.userToolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -41,13 +52,14 @@ public class UserActivity extends AppCompatActivity {
         //TabLayout userTab = (TabLayout)findViewById(R.id.userTab);
         //userTab.setTabMode(TabLayout.MODE_FIXED);
 
-        userToolbar = (Toolbar)findViewById(R.id.userToolbar);
-        userViewpager = (ViewPager)findViewById(R.id.userViewpager);
-        userTab = (TabLayout)findViewById(R.id.userTab) ;
+        userToolbar = (Toolbar) findViewById(R.id.userToolbar);
+        userViewpager = (ViewPager) findViewById(R.id.userViewpager);
+        userTab = (TabLayout) findViewById(R.id.userTab);
 
-       setToolbar();
+        setToolbar();
 
         mainFragmentAdapter = new MainFragmentAdapter(getSupportFragmentManager());
+
         setUpViewPager(userViewpager, mainFragmentAdapter); //viewPager에  adapter를 달아준다.
         userTab.setupWithViewPager(userViewpager);
     }
@@ -62,7 +74,7 @@ public class UserActivity extends AppCompatActivity {
     }
 */
 
-    private void setToolbar(){
+    private void setToolbar() {
         setSupportActionBar(userToolbar); //AooCompatActivity actionbar를 설정
         getSupportActionBar().setTitle("회원등록"); //타이틀 설정
     }
@@ -74,11 +86,12 @@ public class UserActivity extends AppCompatActivity {
         mainFragmentAdapter.addFragment(new OrganizationFragment(), "단체");
         mainFragmentAdapter.addFragment(new JudgementFragment(), "심판");
         mainFragmentAdapter.addFragment(new ManagerFragment(), "관리자");
+
         viewPager.setAdapter(mainFragmentAdapter);
     }
 
     //http://blog.daum.net/mailss/19 FragmentPagerAdapter 설명
-    class MainFragmentAdapter extends FragmentPagerAdapter{
+    class MainFragmentAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragments = new ArrayList<>();
         private final List<String> mFragmentTitles = new ArrayList<>();
 

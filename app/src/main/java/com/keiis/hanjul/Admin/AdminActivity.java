@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 import com.keiis.hanjul.user.UserActivity;
 
@@ -24,11 +25,17 @@ public class AdminActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_admin);
 
         ButterKnife.bind(this);
 
         titleView.setText("관리자");
+    }
+
+    @OnClick(R.id.header)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
     }
 
     @OnClick(R.id.my_info)

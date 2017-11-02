@@ -221,3 +221,15 @@ k
 ;app/src/main/java/com/keiis/hanjul/NetworkModel/result.java,3/4/34c26a5b7dd415e091a02b544cb1a425b990f7aa
 p
 @app/src/main/java/com/keiis/hanjul/NetworkModel/ExistPlayer.java,f/3/f325c64bdc08dde72d21404eb1fbe2d5ee27a2ab
+m
+=app/src/main/res/layouts/judgement/layout/activity_record.xml,a/f/af14a0a5b0be7c7f65e18ed630521917d12c8e0e
+k
+;app/src/main/res/layouts/user/layout/fragment_judgement.xml,4/6/46d11099d9f18ab7f6ecb7bca738f797916784f9
+{
+Kapp/src/main/res/layouts/organization/layout/fragment_player_management.xml,5/8/582e81f9a73139d4ac083f9417bbf8c230b0d6b4
+c
+3app/src/main/res/layouts/user/layout/agent_list.xml,a/4/a441d4e55340afca777e0e4b7d5ab2abcf69be2e
+y
+Iapp/src/main/res/layouts/organization/layout/activity_player_register.xml,7/3/73b0b8387f77657151df0d431146cb821454f80b
+p
+@app/src/main/res/layouts/judgement/layout/activity_jugdement.xml,2/9/29d0d6c9cf73c16b14d42605db4bdaf7aa15531c

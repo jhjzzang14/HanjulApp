@@ -7,12 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class PlayerManagerActivity extends AppCompatActivity {
 
@@ -25,6 +27,12 @@ public class PlayerManagerActivity extends AppCompatActivity {
     @BindView(R.id.viewpager)
     ViewPager viewPagerView;
 
+
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

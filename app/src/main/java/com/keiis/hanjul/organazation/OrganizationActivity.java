@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.NetworkModel.ContestOrgnRetrieve;
 import com.keiis.hanjul.NetworkModel.ContestRetrieve;
 import com.keiis.hanjul.NetworkModel.DataContestResult;
@@ -70,6 +71,12 @@ public class OrganizationActivity extends AppCompatActivity {
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,7 +117,7 @@ public class OrganizationActivity extends AppCompatActivity {
                     for(ContestRetrieve contestName : contests){
                         contestNames.add(contestName.getSmart_contest_name());
                     }
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(OrganizationActivity.this,android.R.layout.simple_spinner_item, contestNames);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(OrganizationActivity.this,android.R.layout.simple_spinner_dropdown_item, contestNames);
 
                     subjectSpinner.setAdapter(adapter);
 
@@ -148,7 +155,7 @@ public class OrganizationActivity extends AppCompatActivity {
                                         for(ContestOrgnRetrieve contestName : organContests){
                                             contestNames.add(contestName.getOrgn_name());
                                         }
-                                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(OrganizationActivity.this,android.R.layout.simple_spinner_item, contestNames);
+                                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(OrganizationActivity.this,android.R.layout.simple_spinner_dropdown_item, contestNames);
 
                                         groupSpinner.setAdapter(adapter);
 

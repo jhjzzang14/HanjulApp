@@ -19,4 +19,6 @@ public class UnindividualFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_user_confirm_unindividual,null);
     }
+
+
 }

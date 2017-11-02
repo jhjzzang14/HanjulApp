@@ -1,7 +1,4 @@
 
-csquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ãš™Û
 isquid:UselessImportCheck"GRemove this unused import 'com.google.gson.annotations.SerializedName'.(äöúõ
+csquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ãš™Û
 rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ŸÁ³«ûÿÿÿÿ
-Isquid:S1068"-Remove this unused "resultMsg" private field.(¤ÛðÝ8Š–¦Œ÷+
-Msquid:S1068",Remove this unused "resultCd" private field.(‰˜ï–ýÿÿÿÿ8Š–¦Œ÷+
-Hsquid:S1068",Remove this unused "saveFlag" private field.(å±ó¶8Š–¦Œ÷+

@@ -10,10 +10,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by 장호준 on 2017-05-03.
@@ -29,6 +31,12 @@ public class SituationBoardActivity extends AppCompatActivity{
 
     @BindView(R.id.viewpager)
     ViewPager viewPager;
+
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

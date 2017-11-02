@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.R;
 
 import butterknife.BindView;
@@ -18,6 +19,12 @@ public class DividendActiviy extends AppCompatActivity {
     @OnClick(R.id.btn_dividend)
     void actionDividend(){
         //배번생성 클릭시 이벤트 처리
+    }
+
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
     }
 
     @Override

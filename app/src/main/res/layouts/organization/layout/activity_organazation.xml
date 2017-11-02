@@ -33,9 +33,11 @@
 
             <Spinner
                 android:id="@+id/subjectSpinner"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"></Spinner>
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="56dp"
+                ></Spinner>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,9 +48,11 @@
 
             <Spinner
                 android:id="@+id/groupSpinner"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"></Spinner>
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="56dp"
+                ></Spinner>
         </GridLayout>
 
         <GridLayout

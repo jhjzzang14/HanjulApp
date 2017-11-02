@@ -1,14 +1,14 @@
 
+osquid:S1132"NMove the "hanjul01" string literal on the left side of this string comparison.(Šñç¤ùÿÿÿÿ8ØøÜö+
+Psquid:S1068"/Remove this unused "userService" private field.(¶òÁÈùÿÿÿÿ8ØøÜö+
+lsquid:S1132"KMove the "admin" string literal on the left side of this string comparison.(’ñŠšùÿÿÿÿ8ØøÜö+
+jsquid:S1192"IDefine a constant instead of duplicating this literal "hanjul01" 4 times.(Šñç¤ùÿÿÿÿ8ØøÜö+
+fsquid:S1132"JMove the "user" string literal on the left side of this string comparison.(¡Ö½®8ØøÜö+
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İÈ„¢ûÿÿÿÿ8ØøÜö+
+nsquid:S1132"MMove the "manager" string literal on the left side of this string comparison.(ˆ ¢Óÿÿÿÿÿ8ØøÜö+
 osquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ8ØøÜö+
+{squid:S1450"ZRemove the "userService" field and declare it as a local variable in the relevant methods.(¶òÁÈùÿÿÿÿ8ØøÜö+
 osquid:S1132"NMove the "hanjul01" string literal on the left side of this string comparison.(ÎÌÄƒûÿÿÿÿ8ØøÜö+
 esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÀÕò¤şÿÿÿÿ
 osquid:S1132"NMove the "password" string literal on the left side of this string comparison.(Ç³ó¤üÿÿÿÿ8ØøÜö+
-Psquid:S1068"/Remove this unused "userService" private field.(¶òÁÈùÿÿÿÿ8ØøÜö+
-jsquid:S1192"IDefine a constant instead of duplicating this literal "hanjul01" 4 times.(Šñç¤ùÿÿÿÿ8ØøÜö+
-nsquid:S1132"MMove the "manager" string literal on the left side of this string comparison.(ˆ ¢Óÿÿÿÿÿ8ØøÜö+
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İÈ„¢ûÿÿÿÿ8ØøÜö+
-osquid:S1132"NMove the "hanjul01" string literal on the left side of this string comparison.(Šñç¤ùÿÿÿÿ8ØøÜö+
-fsquid:S1132"JMove the "user" string literal on the left side of this string comparison.(¡Ö½®8ØøÜö+
-{squid:S1450"ZRemove the "userService" field and declare it as a local variable in the relevant methods.(¶òÁÈùÿÿÿÿ8ØøÜö+
-lsquid:S1132"KMove the "admin" string literal on the left side of this string comparison.(’ñŠšùÿÿÿÿ8ØøÜö+
 |squid:S1450"`Remove the "defaultRestClient" field and declare it as a local variable in the relevant methods.(Á³Şª8ØøÜö+

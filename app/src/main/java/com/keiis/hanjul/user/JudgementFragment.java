@@ -83,6 +83,7 @@ public class JudgementFragment extends Fragment {
                 tv_agentCd   = (TextView) view.findViewById(R.id.tv_agentCd);
                 tv_agentName = (TextView) view.findViewById(R.id.tv_agentName);
             }
+
         }
 
         public RecyclerViewAdapter(Context context, ArrayList<AgentVO> agentList) {

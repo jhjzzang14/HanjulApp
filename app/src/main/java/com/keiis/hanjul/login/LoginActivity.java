@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.keiis.hanjul.DoubleTabController;
 import com.keiis.hanjul.NetworkService.DefaultRestClient;
 import com.keiis.hanjul.NetworkService.UserService;
 import com.keiis.hanjul.R;
@@ -39,6 +40,12 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.sp_userGubun)
     Spinner sp_userGubun;
 */
+
+    //클래스 네임 정보 얻기
+    @OnClick(R.id.toolbar)
+    void onClassName(){
+        DoubleTabController.onTouchPressed(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
